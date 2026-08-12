@@ -2,12 +2,27 @@
 
 import { useState } from "react";
 
+type PlatformName = "Beehiiv" | "Substack" | "Kit" | "Ghost";
+
 type PlatformResult = {
-  name: string;
+  name: PlatformName;
   cost: number;
   supported: boolean;
   note: string;
 };
+
+type SwitchResult =
+  | {
+      status: "switch";
+      month: number;
+      alternative: PlatformName;
+      currentCost: number;
+      alternativeCost: number;
+      subscribers: number;
+      paidSubscribers: number;
+    }
+  | { status: "none" }
+  | { status: "unsupported" };
 
 export default function Home() {
   const [subscribers, setSubscribers] = useState(5000);
@@ -15,9 +30,11 @@ export default function Home() {
   const [monthlyPrice, setMonthlyPrice] = useState(8);
   const [growth, setGrowth] = useState(5);
   const [years, setYears] = useState(1);
+  const [currentPlatform, setCurrentPlatform] =
+    useState<PlatformName>("Substack");
   const [showResults, setShowResults] = useState(false);
 
-  function beehiivMonthlyPrice(subs: number) {
+  function beehiivScalePrice(subs: number) {
     if (subs <= 1000) return 43;
     if (subs <= 2500) return 61;
     if (subs <= 5000) return 78;
@@ -30,9 +47,59 @@ export default function Home() {
     return null;
   }
 
-  function ghostMonthlyPrice(subs: number) {
-    if (subs <= 1000) return 29;
-    if (subs <= 10000) return 199;
+  function platformMonthlyCost(
+    platform: PlatformName,
+    subs: number,
+    paid: number,
+    price: number
+  ): number | null {
+    const revenue = paid * price;
+
+    if (platform === "Beehiiv") {
+      // Free Launch can be used if there are no paid subscriptions
+      // and the audience is 2,500 or fewer.
+      if (paid === 0 && subs <= 2500) {
+        return 0;
+      }
+
+      const plan = beehiivScalePrice(subs);
+
+      if (plan === null) return null;
+
+      // Scale plan + standard Stripe processing
+      return plan + revenue * 0.029 + paid * 0.3;
+    }
+
+    if (platform === "Substack") {
+      if (paid === 0) return 0;
+
+      // 10% Substack
+      // 2.9% + $0.30 Stripe
+      // 0.7% Stripe Billing
+      return revenue * 0.136 + paid * 0.3;
+    }
+
+    if (platform === "Kit") {
+      if (subs > 10000) return null;
+
+      if (paid === 0) return 0;
+
+      // Kit Commerce: 3.5% + $0.30
+      return revenue * 0.035 + paid * 0.3;
+    }
+
+    if (platform === "Ghost") {
+      // For now we only use the fully verified Publisher
+      // entry price for up to 1,000 members.
+      if (subs > 1000) return null;
+
+      if (paid === 0) {
+        return 18;
+      }
+
+      // Publisher + Stripe processing
+      return 29 + revenue * 0.029 + paid * 0.3;
+    }
 
     return null;
   }
@@ -45,79 +112,46 @@ export default function Home() {
 
     let totalRevenue = 0;
 
-    let beehiivCost = 0;
-    let substackCost = 0;
-    let kitCost = 0;
-    let ghostCost = 0;
+    const totals: Record<PlatformName, number> = {
+      Beehiiv: 0,
+      Substack: 0,
+      Kit: 0,
+      Ghost: 0,
+    };
 
-    let beehiivSupported = true;
-    let kitSupported = true;
-    let ghostSupported = true;
+    const supported: Record<PlatformName, boolean> = {
+      Beehiiv: true,
+      Substack: true,
+      Kit: true,
+      Ghost: true,
+    };
+
+    const platformNames: PlatformName[] = [
+      "Beehiiv",
+      "Substack",
+      "Kit",
+      "Ghost",
+    ];
 
     for (let month = 0; month < months; month++) {
       const revenue = currentPaid * monthlyPrice;
-
       totalRevenue += revenue;
 
-      // -------------------------
-      // BEEHIIV
-      // -------------------------
+      platformNames.forEach((platform) => {
+        const cost = platformMonthlyCost(
+          platform,
+          currentSubscribers,
+          currentPaid,
+          monthlyPrice
+        );
 
-      const beehiivPlan = beehiivMonthlyPrice(currentSubscribers);
+        if (cost === null) {
+          supported[platform] = false;
+        } else if (supported[platform]) {
+          totals[platform] += cost;
+        }
+      });
 
-      if (beehiivPlan === null) {
-        beehiivSupported = false;
-      } else {
-        beehiivCost += beehiivPlan;
-
-        // Stripe standard processing assumption
-        beehiivCost += revenue * 0.029;
-        beehiivCost += currentPaid * 0.3;
-      }
-
-      // -------------------------
-      // SUBSTACK
-      // -------------------------
-
-      // Substack: 10%
-      substackCost += revenue * 0.1;
-
-      // Stripe card processing
-      substackCost += revenue * 0.029;
-      substackCost += currentPaid * 0.3;
-
-      // Stripe recurring billing fee
-      substackCost += revenue * 0.007;
-
-      // -------------------------
-      // KIT
-      // -------------------------
-
-      if (currentSubscribers <= 10000) {
-        // Kit Commerce fee includes payment processing
-        kitCost += revenue * 0.035;
-        kitCost += currentPaid * 0.3;
-      } else {
-        kitSupported = false;
-      }
-
-      // -------------------------
-      // GHOST
-      // -------------------------
-
-      const ghostPlan = ghostMonthlyPrice(currentSubscribers);
-
-      if (ghostPlan === null) {
-        ghostSupported = false;
-      } else {
-        ghostCost += ghostPlan;
-
-        // Stripe processing
-        ghostCost += revenue * 0.029;
-        ghostCost += currentPaid * 0.3;
-      }
-
-      // Grow audience
       currentSubscribers *= 1 + growth / 100;
       currentPaid *= 1 + growth / 100;
     }
@@ -125,27 +159,27 @@ export default function Home() {
     const platforms: PlatformResult[] = [
       {
         name: "Beehiiv",
-        cost: beehiivCost,
-        supported: beehiivSupported,
-        note: "0% platform fee. Scale plan + Stripe processing.",
+        cost: totals.Beehiiv,
+        supported: supported.Beehiiv,
+        note: "Scale plan when required + Stripe. 0% platform take rate.",
       },
       {
         name: "Substack",
-        cost: substackCost,
-        supported: true,
-        note: "10% platform fee + Stripe processing.",
+        cost: totals.Substack,
+        supported: supported.Substack,
+        note: "10% platform fee + Stripe processing and recurring billing fee.",
       },
       {
         name: "Kit",
-        cost: kitCost,
-        supported: kitSupported,
-        note: "Free Newsletter plan up to 10,000 subscribers + Kit Commerce fees.",
+        cost: totals.Kit,
+        supported: supported.Kit,
+        note: "Newsletter Plan up to 10,000 subscribers + Kit Commerce fees.",
       },
       {
         name: "Ghost",
-        cost: ghostCost,
-        supported: ghostSupported,
-        note: "0% platform fee. Ghost(Pro) hosting + Stripe processing.",
+        cost: totals.Ghost,
+        supported: supported.Ghost,
+        note: "Publisher hosting + Stripe. Currently modeled up to 1,000 members.",
       },
     ];
 
@@ -156,19 +190,86 @@ export default function Home() {
     return {
       totalRevenue,
       projectedSubscribers: currentSubscribers,
-      platforms,
       ranked,
+      platforms,
     };
   }
 
+  function findSwitchPoint(): SwitchResult {
+    let futureSubscribers = subscribers;
+    let futurePaid = paidSubscribers;
+
+    const platforms: PlatformName[] = [
+      "Beehiiv",
+      "Substack",
+      "Kit",
+      "Ghost",
+    ];
+
+    for (let month = 0; month <= 36; month++) {
+      const currentCost = platformMonthlyCost(
+        currentPlatform,
+        futureSubscribers,
+        futurePaid,
+        monthlyPrice
+      );
+
+      if (currentCost === null) {
+        return { status: "unsupported" };
+      }
+
+      const alternatives = platforms
+        .filter((platform) => platform !== currentPlatform)
+        .map((platform) => ({
+          name: platform,
+          cost: platformMonthlyCost(
+            platform,
+            futureSubscribers,
+            futurePaid,
+            monthlyPrice
+          ),
+        }))
+        .filter(
+          (
+            item
+          ): item is {
+            name: PlatformName;
+            cost: number;
+          } => item.cost !== null
+        )
+        .sort((a, b) => a.cost - b.cost);
+
+      const cheapest = alternatives[0];
+
+      if (cheapest && cheapest.cost < currentCost) {
+        return {
+          status: "switch",
+          month,
+          alternative: cheapest.name,
+          currentCost,
+          alternativeCost: cheapest.cost,
+          subscribers: futureSubscribers,
+          paidSubscribers: futurePaid,
+        };
+      }
+
+      futureSubscribers *= 1 + growth / 100;
+      futurePaid *= 1 + growth / 100;
+    }
+
+    return { status: "none" };
+  }
+
   const results = calculateProjection();
+  const switchResult = findSwitchPoint();
 
   const winner = results.ranked[0];
-
   const secondPlace = results.ranked[1];
 
   const difference =
-    winner && secondPlace ? secondPlace.cost - winner.cost : 0;
+    winner && secondPlace
+      ? secondPlace.cost - winner.cost
+      : 0;
 
   const invalid =
     subscribers < 0 ||
@@ -180,7 +281,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
       <section className="mx-auto max-w-5xl px-6 py-20 text-center">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-500">
+        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-gray-500">
           NewsletterFit
         </p>
 
@@ -189,7 +290,8 @@ export default function Home() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl">
-          See which newsletter platform could leave you with the most money.
+          Find the newsletter platform that could leave you with more money as
+          your audience grows.
         </p>
 
         <a
@@ -204,17 +306,41 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="calculator" className="mx-auto max-w-5xl px-6 pb-24">
+      <section
+        id="calculator"
+        className="mx-auto max-w-5xl px-6 pb-24"
+      >
         <div className="rounded-3xl border border-gray-200 p-8 shadow-sm">
           <h2 className="text-3xl font-bold">
             Tell us about your newsletter
           </h2>
 
           <p className="mt-2 text-gray-600">
-            We'll estimate your real platform and payment costs.
+            We'll estimate your platform costs today and as you grow.
           </p>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <label>
+              <span className="mb-2 block font-medium">
+                Current platform
+              </span>
+
+              <select
+                value={currentPlatform}
+                onChange={(e) =>
+                  setCurrentPlatform(
+                    e.target.value as PlatformName
+                  )
+                }
+                className="w-full rounded-xl border border-gray-300 p-4"
+              >
+                <option value="Substack">Substack</option>
+                <option value="Beehiiv">Beehiiv</option>
+                <option value="Kit">Kit</option>
+                <option value="Ghost">Ghost</option>
+              </select>
+            </label>
+
             <label>
               <span className="mb-2 block font-medium">
                 Total subscribers
@@ -275,14 +401,16 @@ export default function Home() {
               />
             </label>
 
-            <label className="md:col-span-2">
+            <label>
               <span className="mb-2 block font-medium">
                 Projection period
               </span>
 
               <select
                 value={years}
-                onChange={(e) => setYears(Number(e.target.value))}
+                onChange={(e) =>
+                  setYears(Number(e.target.value))
+                }
                 className="w-full rounded-xl border border-gray-300 p-4"
               >
                 <option value={1}>1 year</option>
@@ -294,8 +422,8 @@ export default function Home() {
 
           {invalid && (
             <p className="mt-5 rounded-xl bg-red-50 p-4 text-red-700">
-              Please check your numbers. Paid subscribers cannot exceed
-              total subscribers.
+              Please check your numbers. Paid subscribers cannot exceed total
+              subscribers.
             </p>
           )}
 
@@ -309,6 +437,7 @@ export default function Home() {
 
           {showResults && !invalid && (
             <div className="mt-10">
+
               {winner && (
                 <div className="rounded-3xl bg-green-50 p-8 text-center">
                   <p className="text-sm font-bold uppercase tracking-wide text-green-700">
@@ -323,14 +452,120 @@ export default function Home() {
                     <p className="mt-4 text-lg">
                       Estimated to cost about{" "}
                       <strong>
-                        ${Math.round(difference).toLocaleString()}
+                        $
+                        {Math.round(
+                          difference
+                        ).toLocaleString()}
                       </strong>{" "}
-                      less than the next-cheapest option over{" "}
+                      less than the next-cheapest supported option over{" "}
                       {years} {years === 1 ? "year" : "years"}.
                     </p>
                   )}
                 </div>
               )}
+
+              <div className="mt-8 rounded-3xl border border-gray-200 p-7">
+                <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+                  When should you switch?
+                </p>
+
+                {switchResult.status === "switch" && (
+                  <>
+                    {switchResult.month === 0 ? (
+                      <h3 className="mt-3 text-3xl font-bold">
+                        {switchResult.alternative} is already cheaper for you.
+                      </h3>
+                    ) : (
+                      <h3 className="mt-3 text-3xl font-bold">
+                        In about {switchResult.month}{" "}
+                        {switchResult.month === 1
+                          ? "month"
+                          : "months"}
+                      </h3>
+                    )}
+
+                    <p className="mt-4 text-lg text-gray-700">
+                      Based only on the fees we can currently verify,{" "}
+                      <strong>{switchResult.alternative}</strong>{" "}
+                      would cost less than{" "}
+                      <strong>{currentPlatform}</strong>.
+                    </p>
+
+                    <div className="mt-6 grid gap-4 md:grid-cols-3">
+                      <div className="rounded-2xl bg-gray-50 p-5">
+                        <p className="text-sm text-gray-500">
+                          Estimated subscribers
+                        </p>
+
+                        <p className="mt-1 text-2xl font-bold">
+                          {Math.round(
+                            switchResult.subscribers
+                          ).toLocaleString()}
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl bg-gray-50 p-5">
+                        <p className="text-sm text-gray-500">
+                          Paid subscribers
+                        </p>
+
+                        <p className="mt-1 text-2xl font-bold">
+                          {Math.round(
+                            switchResult.paidSubscribers
+                          ).toLocaleString()}
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl bg-gray-50 p-5">
+                        <p className="text-sm text-gray-500">
+                          Monthly fee difference
+                        </p>
+
+                        <p className="mt-1 text-2xl font-bold">
+                          $
+                          {Math.round(
+                            switchResult.currentCost -
+                              switchResult.alternativeCost
+                          ).toLocaleString()}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {switchResult.status === "none" && (
+                  <>
+                    <h3 className="mt-3 text-3xl font-bold">
+                      No cheaper switch found within 36 months.
+                    </h3>
+
+                    <p className="mt-3 text-gray-600">
+                      Under your current assumptions, your selected platform
+                      remains competitive on fees.
+                    </p>
+                  </>
+                )}
+
+                {switchResult.status === "unsupported" && (
+                  <>
+                    <h3 className="mt-3 text-3xl font-bold">
+                      We need more pricing data for this projection.
+                    </h3>
+
+                    <p className="mt-3 text-gray-600">
+                      Your audience eventually moves beyond a pricing range we
+                      can verify reliably. We would rather show no estimate than
+                      invent one.
+                    </p>
+                  </>
+                )}
+
+                <p className="mt-5 text-xs text-gray-500">
+                  This compares platform and payment fees only. Migration costs,
+                  taxes, feature differences and other business considerations
+                  are not included yet.
+                </p>
+              </div>
 
               <div className="mt-8">
                 <h3 className="text-2xl font-bold">
@@ -338,39 +573,41 @@ export default function Home() {
                 </h3>
 
                 <div className="mt-4 grid gap-4">
-                  {results.ranked.map((platform, index) => (
-                    <div
-                      key={platform.name}
-                      className="flex flex-col justify-between gap-4 rounded-2xl border border-gray-200 p-6 md:flex-row md:items-center"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-gray-500">
-                          #{index + 1}
-                        </p>
+                  {results.ranked.map(
+                    (platform, index) => (
+                      <div
+                        key={platform.name}
+                        className="flex flex-col justify-between gap-4 rounded-2xl border border-gray-200 p-6 md:flex-row md:items-center"
+                      >
+                        <div>
+                          <p className="text-sm font-semibold text-gray-500">
+                            #{index + 1}
+                          </p>
 
-                        <p className="mt-1 text-2xl font-bold">
-                          {platform.name}
-                        </p>
+                          <p className="mt-1 text-2xl font-bold">
+                            {platform.name}
+                          </p>
 
-                        <p className="mt-2 text-sm text-gray-600">
-                          {platform.note}
-                        </p>
+                          <p className="mt-2 max-w-xl text-sm text-gray-600">
+                            {platform.note}
+                          </p>
+                        </div>
+
+                        <div className="md:text-right">
+                          <p className="text-3xl font-bold">
+                            $
+                            {Math.round(
+                              platform.cost
+                            ).toLocaleString()}
+                          </p>
+
+                          <p className="text-sm text-gray-500">
+                            estimated total cost
+                          </p>
+                        </div>
                       </div>
-
-                      <div className="md:text-right">
-                        <p className="text-3xl font-bold">
-                          $
-                          {Math.round(
-                            platform.cost
-                          ).toLocaleString()}
-                        </p>
-
-                        <p className="text-sm text-gray-500">
-                          estimated total cost
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
               </div>
 
@@ -379,14 +616,13 @@ export default function Home() {
               ) && (
                 <div className="mt-6 rounded-2xl bg-yellow-50 p-6">
                   <p className="font-bold">
-                    Some platforms need additional pricing data
+                    Some platforms were excluded
                   </p>
 
                   <p className="mt-2 text-sm text-gray-700">
-                    Your projected audience exceeds the publicly verified
-                    pricing range we currently support for one or more
-                    platforms. Those platforms were excluded from the
-                    ranking rather than showing you an unreliable estimate.
+                    Your projected audience exceeds a pricing range we currently
+                    support with enough confidence. We excluded those options
+                    instead of showing an unreliable number.
                   </p>
                 </div>
               )}
@@ -413,12 +649,10 @@ export default function Home() {
                 </p>
 
                 <p className="mt-5 text-xs leading-5 text-gray-500">
-                  Estimate assumes monthly subscriber billing, U.S.
-                  payment processing and the same growth rate for free and
-                  paid subscribers. Taxes, refunds, chargebacks, currency
-                  conversion and promotional pricing are excluded.
-                  Beehiiv and Ghost hosting estimates use annual-billing
-                  rates where applicable.
+                  Estimates assume monthly paid subscriptions, U.S.-dollar
+                  payment processing and equal growth rates for free and paid
+                  subscribers. Taxes, refunds, chargebacks, promotional pricing
+                  and migration expenses are excluded.
                 </p>
 
                 <p className="mt-2 text-xs text-gray-500">
