@@ -88,18 +88,23 @@ export default function Home() {
       return revenue * 0.035 + paid * 0.3;
     }
 
-    if (platform === "Ghost") {
-      // For now we only use the fully verified Publisher
-      // entry price for up to 1,000 members.
-      if (subs > 1000) return null;
+   if (platform === "Ghost") {
+  let planCost: number;
 
-      if (paid === 0) {
-        return 18;
-      }
+  if (subs <= 1000) {
+    planCost = paid > 0 ? 29 : 18;
+  } else if (subs <= 10000) {
+    planCost = 199;
+  } else {
+    return null;
+  }
 
-      // Publisher + Stripe processing
-      return 29 + revenue * 0.029 + paid * 0.3;
-    }
+  if (paid === 0) {
+    return planCost;
+  }
+
+  return planCost + revenue * 0.029 + paid * 0.3;
+}
 
     return null;
   }
@@ -179,7 +184,7 @@ export default function Home() {
         name: "Ghost",
         cost: totals.Ghost,
         supported: supported.Ghost,
-        note: "Publisher hosting + Stripe. Currently modeled up to 1,000 members.",
+        note: "Publisher/Business hosting + Stripe. Modeled up to 10,000 members.",
       },
     ];
 
