@@ -316,40 +316,120 @@ const savingsVsCurrent =
 
   return (
     <main className="min-h-screen bg-white text-black">
-      <section className="mx-auto max-w-5xl px-6 py-20 text-center">
-        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-gray-500">
-          NewsletterFit
-        </p>
+      <section className="border-b border-gray-100 bg-gradient-to-b from-gray-50 to-white">
+  <div className="mx-auto max-w-6xl px-6 py-6">
+    <div className="flex items-center justify-between">
+      <div className="text-xl font-bold tracking-tight">
+        NewsletterFit
+      </div>
 
-        <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
-          Are you overpaying for your newsletter platform?
-        </h1>
+      <a
+        href="#calculator"
+        className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-800"
+      >
+        Compare Platforms
+      </a>
+    </div>
+  </div>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 md:text-xl">
-          Find the newsletter platform that could leave you with more money as
-          your audience grows.
-        </p>
+  <div className="mx-auto max-w-5xl px-6 pb-24 pt-16 text-center">
+    <div className="mx-auto mb-6 inline-flex rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm">
+      Free newsletter platform cost calculator
+    </div>
 
-        <a
-          href="#calculator"
-          className="mt-10 inline-block rounded-xl bg-black px-7 py-4 text-lg font-semibold text-white"
+    <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-gray-950 md:text-7xl">
+      Stop overpaying for your newsletter platform.
+    </h1>
+
+    <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 md:text-xl">
+      Compare Beehiiv, Substack, Kit and Ghost based on your audience,
+      paid subscribers and expected growth.
+    </p>
+
+    <p className="mx-auto mt-3 max-w-2xl text-lg font-medium text-gray-900">
+      See which option could leave you with more money over the next 1–3 years.
+    </p>
+
+    <a
+      href="#calculator"
+      className="mt-10 inline-flex items-center rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-800"
+    >
+      Find My Best Platform →
+    </a>
+
+    <p className="mt-4 text-sm text-gray-500">
+      Free · No signup · Takes less than 60 seconds
+    </p>
+
+    <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4">
+      {["Beehiiv", "Substack", "Kit", "Ghost"].map((platform) => (
+        <div
+          key={platform}
+          className="rounded-xl border border-gray-200 bg-white px-4 py-4 font-semibold text-gray-700 shadow-sm"
         >
-          Find My Best Platform
-        </a>
-
-        <p className="mt-4 text-sm text-gray-500">
-          Free. No signup required.
-        </p>
+          {platform}
+        </div>
+      ))}
+    </div>
+  </div>
       </section>
 
-      <section
-        id="calculator"
-        className="mx-auto max-w-5xl px-6 pb-24"
-      >
-        <div className="rounded-3xl border border-gray-200 p-8 shadow-sm">
-          <h2 className="text-3xl font-bold">
-            Tell us about your newsletter
-          </h2>
+<section className="bg-white">
+  <div className="mx-auto max-w-6xl px-6 py-16">
+    <div className="grid gap-8 md:grid-cols-3">
+      <div className="rounded-2xl border border-gray-200 p-6">
+        <p className="text-sm font-bold text-gray-500">01</p>
+
+        <h3 className="mt-3 text-xl font-bold">
+          Enter your numbers
+        </h3>
+
+        <p className="mt-2 leading-6 text-gray-600">
+          Tell us your subscribers, paid members, pricing and expected growth.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-gray-200 p-6">
+        <p className="text-sm font-bold text-gray-500">02</p>
+
+        <h3 className="mt-3 text-xl font-bold">
+          We compare the real costs
+        </h3>
+
+        <p className="mt-2 leading-6 text-gray-600">
+          NewsletterFit estimates platform fees, payment fees and future costs as your audience grows.
+        </p>
+      </div>
+
+      <div className="rounded-2xl border border-gray-200 p-6">
+        <p className="text-sm font-bold text-gray-500">03</p>
+
+        <h3 className="mt-3 text-xl font-bold">
+          See your best fit
+        </h3>
+
+        <p className="mt-2 leading-6 text-gray-600">
+          Get a ranked comparison and see how much switching could potentially save you.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-10 rounded-2xl bg-gray-50 p-6 text-center">
+      <p className="text-sm font-medium text-gray-600">
+        Independent comparison · No platform pays to rank higher · Pricing data is regularly reviewed
+      </p>
+    </div>
+  </div>
+</section>
+
+     <section id="calculator" className="mx-auto max-w-5xl px-6 py-20">
+<div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-xl shadow-gray-200/50 md:p-10">
+          <div className="mb-5 inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-600">
+  Personalized cost analysis
+</div>
+          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+  Find the best platform for your newsletter
+</h2>
 
           <p className="mt-2 text-gray-600">
             We'll estimate your platform costs today and as you grow.
@@ -490,31 +570,81 @@ const savingsVsCurrent =
           {showResults && !invalid && (
             <div className="mt-10">
 
-              {winner && (
-                <div className="rounded-3xl bg-green-50 p-8 text-center">
-                  <p className="text-sm font-bold uppercase tracking-wide text-green-700">
-                    Lowest estimated cost
-                  </p>
+             {winner && (
+  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-200/40">
+    <div className="bg-gray-950 px-8 py-4 text-center text-white">
+      <p className="text-xs font-bold uppercase tracking-[0.2em]">
+        NewsletterFit Recommendation
+      </p>
+    </div>
 
-                  <p className="mt-3 text-5xl font-bold">
-                    {winner.name}
-                  </p>
+    <div className="p-8 text-center md:p-10">
+      <div className="mx-auto inline-flex rounded-full bg-green-100 px-4 py-2 text-sm font-bold text-green-800">
+        #1 Best fit based on your inputs
+      </div>
 
-                  {secondPlace && (
-                    <p className="mt-4 text-lg">
-                      Estimated to cost about{" "}
-                      <strong>
-                        $
-                        {Math.round(
-                          difference
-                        ).toLocaleString()}
-                      </strong>{" "}
-                      less than the next-cheapest supported option over{" "}
-                      {years} {years === 1 ? "year" : "years"}.
-                    </p>
-                  )}
-                </div>
-              )}
+      <h2 className="mt-5 text-5xl font-bold tracking-tight">
+        {winner.name}
+      </h2>
+
+      <p className="mx-auto mt-4 max-w-2xl text-lg leading-7 text-gray-600">
+        Based on the pricing, payment fees, audience size and growth assumptions
+        included in this analysis.
+      </p>
+
+      <div className="mx-auto mt-8 grid max-w-2xl gap-4 md:grid-cols-2">
+        <div className="rounded-2xl bg-gray-50 p-6">
+          <p className="text-sm font-medium text-gray-500">
+            Estimated cost
+          </p>
+
+          <p className="mt-2 text-3xl font-bold">
+            ${Math.round(winner.cost).toLocaleString()}
+          </p>
+
+          <p className="mt-1 text-sm text-gray-500">
+            over {years} {years === 1 ? "year" : "years"}
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-green-50 p-6">
+          <p className="text-sm font-medium text-green-700">
+            Potential savings vs. current platform
+          </p>
+
+          <p className="mt-2 text-3xl font-bold text-green-900">
+            ${Math.round(savingsVsCurrent).toLocaleString()}
+          </p>
+
+          <p className="mt-1 text-sm text-green-700">
+            based on your projection
+          </p>
+        </div>
+      </div>
+
+      {winner.name !== currentPlatform ? (
+        <div className="mt-8">
+          <button
+            type="button"
+            className="rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white"
+          >
+            Explore {winner.name} →
+          </button>
+
+          <p className="mt-3 text-xs text-gray-500">
+            Affiliate link will be added before launch.
+          </p>
+        </div>
+      ) : (
+        <div className="mx-auto mt-8 max-w-xl rounded-2xl bg-gray-50 p-5">
+          <p className="font-semibold">
+            You may already be on your lowest-cost option.
+          </p>
+        </div>
+      )}
+    </div>
+  </div>
+)}
 
               {winner && currentPlatformResult && (
   <div className="mt-6 rounded-3xl border border-gray-200 p-7 text-center">
