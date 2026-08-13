@@ -297,6 +297,16 @@ if (platform === "Kit") {
       ? secondPlace.cost - winner.cost
       : 0;
 
+  const currentPlatformResult = results.platforms.find(
+  (platform) =>
+    platform.name === currentPlatform && platform.supported
+);
+
+const savingsVsCurrent =
+  winner && currentPlatformResult
+    ? Math.max(0, currentPlatformResult.cost - winner.cost)
+    : 0;
+
   const invalid =
     subscribers < 0 ||
     paidSubscribers < 0 ||
@@ -505,6 +515,41 @@ if (platform === "Kit") {
                   )}
                 </div>
               )}
+
+              {winner && currentPlatformResult && (
+  <div className="mt-6 rounded-3xl border border-gray-200 p-7 text-center">
+    <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+      Compared with your current platform
+    </p>
+
+    {winner.name === currentPlatform ? (
+      <>
+        <h3 className="mt-3 text-3xl font-bold">
+          Your current platform is already the lowest-cost option.
+        </h3>
+
+        <p className="mt-3 text-gray-600">
+          Based on the fees and assumptions included in this calculator,
+          switching platforms would not currently save you money.
+        </p>
+      </>
+    ) : (
+      <>
+        <h3 className="mt-3 text-3xl font-bold">
+          Switching from {currentPlatform} to {winner.name}
+        </h3>
+
+        <p className="mt-4 text-lg text-gray-700">
+          Could save you approximately{" "}
+          <strong>
+            ${Math.round(savingsVsCurrent).toLocaleString()}
+          </strong>{" "}
+          over {years} {years === 1 ? "year" : "years"}.
+        </p>
+      </>
+    )}
+  </div>
+)}
 
               <div className="mt-8 rounded-3xl border border-gray-200 p-7">
                 <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
