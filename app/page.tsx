@@ -30,6 +30,7 @@ export default function Home() {
   const [monthlyPrice, setMonthlyPrice] = useState(8);
   const [growth, setGrowth] = useState(5);
   const [years, setYears] = useState(1);
+  const [needsAdvancedAutomations, setNeedsAdvancedAutomations] = useState(false);
   const [currentPlatform, setCurrentPlatform] =
     useState<PlatformName>("Substack");
   const [showResults, setShowResults] = useState(false);
@@ -46,6 +47,14 @@ export default function Home() {
 
     return null;
   }
+  function kitCreatorPrice(subs: number) {
+  if (subs <= 1000) return 33;
+  if (subs <= 3000) return 49.17;
+  if (subs <= 5000) return 65.83;
+  if (subs <= 10000) return 92.50;
+
+  return null;
+}
 
   function platformMonthlyCost(
     platform: PlatformName,
@@ -79,14 +88,26 @@ export default function Home() {
       return revenue * 0.136 + paid * 0.3;
     }
 
-    if (platform === "Kit") {
-      if (subs > 10000) return null;
+if (platform === "Kit") {
+  if (needsAdvancedAutomations) {
+    const creatorPlan = kitCreatorPrice(subs);
 
-      if (paid === 0) return 0;
+    if (creatorPlan === null) return null;
 
-      // Kit Commerce: 3.5% + $0.30
-      return revenue * 0.035 + paid * 0.3;
+    if (paid === 0) {
+      return creatorPlan;
     }
+
+    return creatorPlan + revenue * 0.035 + paid * 0.3;
+  }
+
+  // Free Newsletter plan supports up to 10,000 subscribers.
+  if (subs > 10000) return null;
+
+  if (paid === 0) return 0;
+
+  return revenue * 0.035 + paid * 0.3;
+}
 
    if (platform === "Ghost") {
   let planCost: number;
@@ -405,6 +426,22 @@ export default function Home() {
                 className="w-full rounded-xl border border-gray-300 p-4"
               />
             </label>
+            <label className="md:col-span-2">
+  <span className="mb-2 block font-medium">
+    Do you need advanced automations?
+  </span>
+
+  <select
+    value={needsAdvancedAutomations ? "yes" : "no"}
+    onChange={(e) =>
+      setNeedsAdvancedAutomations(e.target.value === "yes")
+    }
+    className="w-full rounded-xl border border-gray-300 p-4"
+  >
+    <option value="no">No</option>
+    <option value="yes">Yes</option>
+  </select>
+</label>
 
             <label>
               <span className="mb-2 block font-medium">
