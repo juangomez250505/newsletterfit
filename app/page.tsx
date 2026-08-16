@@ -30,6 +30,7 @@ export default function Home() {
   const [monthlyPrice, setMonthlyPrice] = useState(8);
   const [growth, setGrowth] = useState(5);
   const [years, setYears] = useState(1);
+  const [creatorCountry, setCreatorCountry] = useState("US");
   const [needsAdvancedAutomations, setNeedsAdvancedAutomations] = useState(false);
   const [currentPlatform, setCurrentPlatform] =
     useState<PlatformName>("Substack");
@@ -306,7 +307,7 @@ const savingsVsCurrent =
   winner && currentPlatformResult
     ? Math.max(0, currentPlatformResult.cost - winner.cost)
     : 0;
-
+const countrySupported = creatorCountry === "US";
   const invalid =
     subscribers < 0 ||
     paidSubscribers < 0 ||
@@ -457,6 +458,21 @@ const savingsVsCurrent =
               </select>
             </label>
 
+<label>
+  <span className="mb-2 block font-medium">
+    Where is your Stripe account based?
+  </span>
+
+  <select
+    value={creatorCountry}
+    onChange={(e) => setCreatorCountry(e.target.value)}
+    className="w-full rounded-xl border border-gray-300 p-4"
+  >
+    <option value="US">United States</option>
+    <option value="MX">Mexico</option>
+  </select>
+</label>
+
             <label>
               <span className="mb-2 block font-medium">
                 Total subscribers
@@ -559,8 +575,23 @@ const savingsVsCurrent =
             </p>
           )}
 
+{creatorCountry === "MX" && (
+  <div className="mt-6 rounded-2xl border border-yellow-200 bg-yellow-50 p-5">
+    <p className="font-bold text-yellow-900">
+      Mexico pricing is different
+    </p>
+
+    <p className="mt-2 text-sm leading-6 text-yellow-800">
+      Substack currently does not apply its standard 10% application fee to
+      creators with Stripe accounts based in Mexico. Stripe Mexico also uses
+      different payment-processing fees. NewsletterFit will add full MXN
+      calculations before launch rather than showing you an inaccurate estimate.
+    </p>
+  </div>
+)}
+
           <button
-            disabled={invalid}
+           disabled={invalid || !countrySupported}
             onClick={() => setShowResults(true)}
             className="mt-8 w-full rounded-xl bg-black px-6 py-4 text-lg font-semibold text-white disabled:opacity-40"
           >
