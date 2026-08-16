@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   description:
     "Compare Beehiiv, Substack, Kit and Ghost based on your subscribers, paid members and growth. See which newsletter platform could save you more.",
 
+verification: {
+  google: "wd0o8oa9fCZ83GJSbXFmKZ0nrpwzyDxcQpjjbfifj8Y",
+},
+
   robots: {
     index: true,
     follow: true,
