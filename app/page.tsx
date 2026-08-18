@@ -4,6 +4,10 @@ import { useState } from "react";
 
 type PlatformName = "Beehiiv" | "Substack" | "Kit" | "Ghost";
 
+const affiliateLinks: Partial<Record<PlatformName, string>> = {
+  Beehiiv: "https://www.beehiiv.com/?via=juan-gomez",
+};
+
 type PlatformResult = {
   name: PlatformName;
   cost: number;
@@ -655,16 +659,30 @@ const countrySupported = creatorCountry === "US";
 
       {winner.name !== currentPlatform ? (
         <div className="mt-8">
-          <button
-            type="button"
-            className="rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white"
-          >
-            Explore {winner.name} →
-          </button>
+         {affiliateLinks[winner.name] ? (
+  <a
+    href={affiliateLinks[winner.name]}
+    target="_blank"
+    rel="sponsored noopener noreferrer"
+    className="inline-block rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white"
+  >
+    Explore {winner.name} →
+  </a>
+) : (
+  <button
+    type="button"
+    disabled
+    className="rounded-xl bg-gray-300 px-8 py-4 text-lg font-semibold text-gray-600"
+  >
+    Explore {winner.name} →
+  </button>
+)}
 
-          <p className="mt-3 text-xs text-gray-500">
-            Affiliate link will be added before launch.
-          </p>
+<p className="mt-3 text-xs text-gray-500">
+  {affiliateLinks[winner.name]
+    ? "NewsletterFit may earn a commission if you sign up through this link, at no extra cost to you."
+    : "Partner link coming soon."}
+</p>
         </div>
       ) : (
         <div className="mx-auto mt-8 max-w-xl rounded-2xl bg-gray-50 p-5">
