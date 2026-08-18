@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const BEEHIIV_AFFILIATE_URL =
+  "https://www.beehiiv.com/?via=newsletterfit";
+
 export const metadata: Metadata = {
   title: "Beehiiv vs Kit (2026): Pricing & Features Compared | NewsletterFit",
   description:
@@ -254,6 +257,19 @@ export default function BeehiivVsKit() {
             heavily about native growth, paid subscriptions, advertising and
             newsletter-specific monetization.
           </p>
+
+          <a
+  href={BEEHIIV_AFFILIATE_URL}
+  target="_blank"
+  rel="sponsored noopener noreferrer"
+  className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+>
+  Try Beehiiv →
+</a>
+
+<p className="mt-3 text-xs text-gray-500">
+  Affiliate link. NewsletterFit may earn a commission at no extra cost to you.
+</p>
 
           <h2 className="mt-12 text-3xl font-bold">
             Choose Kit if...
