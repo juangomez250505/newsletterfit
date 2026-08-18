@@ -47,5 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   priority: 0.3,
 },
 
+{
+  url: "https://getnewsletterfit.com/kit-vs-substack",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+
   ];
 }
