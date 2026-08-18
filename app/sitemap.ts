@@ -54,5 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   priority: 0.8,
 },
 
+{
+  url: "https://getnewsletterfit.com/beehiiv-vs-ghost",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+
   ];
 }
