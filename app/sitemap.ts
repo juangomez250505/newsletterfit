@@ -20,5 +20,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+
+    {
+  url: "https://getnewsletterfit.com/beehiiv-vs-kit",
+  lastModified: new Date(),
+  changeFrequency: "weekly",
+  priority: 0.9,
+},
+
   ];
 }
