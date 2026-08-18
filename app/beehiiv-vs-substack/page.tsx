@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+  canonical: "/beehiiv-vs-substack",
+},
   title: "Beehiiv vs Substack (2026): Cost & Fee Comparison | NewsletterFit",
   description:
     "Compare Beehiiv vs Substack pricing, paid subscription fees, growth tools and costs. Use our free calculator to see which platform could save you more.",

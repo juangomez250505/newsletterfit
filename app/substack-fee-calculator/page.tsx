@@ -3,6 +3,9 @@ import Link from "next/link";
 import Calculator from "./Calculator";
 
 export const metadata: Metadata = {
+  alternates: {
+  canonical: "/substack-fee-calculator",
+},
   title: "Substack Fee Calculator (2026) | NewsletterFit",
   description:
     "Calculate Substack's 10% fee plus estimated Stripe payment fees. See how much of your paid newsletter revenue you could keep.",
