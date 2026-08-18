@@ -5,7 +5,7 @@ import { useState } from "react";
 type PlatformName = "Beehiiv" | "Substack" | "Kit" | "Ghost";
 
 const affiliateLinks: Partial<Record<PlatformName, string>> = {
-  Beehiiv: "https://www.beehiiv.com/?via=juan-gomez",
+  Beehiiv: "https://www.beehiiv.com/?via=newsletterfit",
 };
 
 type PlatformResult = {
