@@ -13,6 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://getnewsletterfit.com"),
+
+alternates: {
+  canonical: "/",
+},
   title: "Newsletter Platform Cost Calculator | NewsletterFit",
 
   description:
