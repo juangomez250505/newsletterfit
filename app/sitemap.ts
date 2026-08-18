@@ -61,5 +61,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   priority: 0.8,
 },
 
+{
+  url: "https://getnewsletterfit.com/substack-vs-ghost",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+{
+  url: "https://getnewsletterfit.com/kit-vs-ghost",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+
   ];
 }
