@@ -929,6 +929,96 @@ const countrySupported = creatorCountry === "US";
           )}
         </div>
       </section>
+
+<section className="mx-auto max-w-6xl px-6 py-16">
+  <div className="max-w-2xl">
+    <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+      Compare platforms
+    </p>
+
+    <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+      Compare newsletter platforms side by side
+    </h2>
+
+    <p className="mt-4 text-lg leading-8 text-gray-600">
+      Explore detailed comparisons between the most popular newsletter
+      platforms and find the best fit for your audience and business model.
+    </p>
+  </div>
+
+  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    <a
+      href="/beehiiv-vs-substack"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">Beehiiv vs Substack</h3>
+      <p className="mt-2 text-gray-600">
+        Compare fees, monetization and growth tools.
+      </p>
+    </a>
+
+    <a
+      href="/beehiiv-vs-kit"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">Beehiiv vs Kit</h3>
+      <p className="mt-2 text-gray-600">
+        Newsletter growth tools vs creator email automation.
+      </p>
+    </a>
+
+    <a
+      href="/beehiiv-vs-ghost"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">Beehiiv vs Ghost</h3>
+      <p className="mt-2 text-gray-600">
+        Compare newsletter growth with publishing control.
+      </p>
+    </a>
+
+    <a
+      href="/kit-vs-substack"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">Kit vs Substack</h3>
+      <p className="mt-2 text-gray-600">
+        Compare automation, simplicity and subscription fees.
+      </p>
+    </a>
+
+    <a
+      href="/substack-vs-ghost"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">Substack vs Ghost</h3>
+      <p className="mt-2 text-gray-600">
+        Revenue share vs fixed-cost independent publishing.
+      </p>
+    </a>
+
+    <a
+      href="/kit-vs-ghost"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">Kit vs Ghost</h3>
+      <p className="mt-2 text-gray-600">
+        Email automation vs independent publishing.
+      </p>
+    </a>
+  </div>
+
+  <div className="mt-8">
+    <a
+      href="/substack-fee-calculator"
+      className="font-semibold underline"
+    >
+      Calculate Substack fees →
+    </a>
+  </div>
+</section>
+
     </main>
+
   );
 }

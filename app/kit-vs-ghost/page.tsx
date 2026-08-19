@@ -221,6 +221,34 @@ export default function KitVsGhostPage() {
             directly with each platform before making a final decision.
           </p>
         </section>
+
+<section className="mt-14 border-t border-gray-200 pt-10">
+  <h2 className="text-2xl font-bold">Related comparisons</h2>
+
+  <div className="mt-5 flex flex-wrap gap-4">
+    <Link
+      href="/beehiiv-vs-kit"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+    >
+      Beehiiv vs Kit →
+    </Link>
+
+    <Link
+      href="/kit-vs-substack"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+    >
+      Kit vs Substack →
+    </Link>
+
+    <Link
+      href="/substack-vs-ghost"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+    >
+      Substack vs Ghost →
+    </Link>
+  </div>
+</section>
+
       </article>
     </main>
   );
