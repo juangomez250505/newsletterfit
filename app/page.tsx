@@ -264,8 +264,7 @@ if (platform === "MailerLite") {
   name: "MailerLite",
   cost: totals.MailerLite,
   supported: supported.MailerLite,
-  description:
-    "Comfort plan + Stripe processing for paid newsletters.",
+  note: "Comfort plan + Stripe processing for paid newsletters.",
 },
     ];
 
