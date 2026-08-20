@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 
-type PlatformName = "Beehiiv" | "Substack" | "Kit" | "Ghost";
+type PlatformName =
+  | "Beehiiv"
+  | "Substack"
+  | "Kit"
+  | "Ghost"
+  | "MailerLite";
 
 const affiliateLinks: Partial<Record<PlatformName, string>> = {
   Beehiiv: "https://www.beehiiv.com/?via=newsletterfit",
@@ -61,6 +66,16 @@ export default function Home() {
   return null;
 }
 
+function mailerLiteComfortPrice(subs: number) {
+  if (subs <= 500) return 10.8;
+  if (subs <= 1000) return 17.1;
+  if (subs <= 2500) return 29.7;
+  if (subs <= 5000) return 44.1;
+  if (subs <= 10000) return 80.1;
+
+  return null;
+}
+
   function platformMonthlyCost(
     platform: PlatformName,
     subs: number,
@@ -113,7 +128,19 @@ if (platform === "Kit") {
 
   return revenue * 0.035 + paid * 0.3;
 }
+if (platform === "MailerLite") {
+  const planCost =
+    paid === 0 && subs <= 250
+      ? 0
+      : mailerLiteComfortPrice(subs);
 
+  if (planCost === null) return null;
+
+  const paymentFees =
+    paid > 0 ? revenue * 0.029 + paid * 0.3 : 0;
+
+  return planCost + paymentFees;
+}
    if (platform === "Ghost") {
   let planCost: number;
 
@@ -166,6 +193,7 @@ if (platform === "Kit") {
       Substack: 0,
       Kit: 0,
       Ghost: 0,
+      MailerLite: 0,
     };
 
     const supported: Record<PlatformName, boolean> = {
@@ -173,14 +201,16 @@ if (platform === "Kit") {
       Substack: true,
       Kit: true,
       Ghost: true,
+      MailerLite: true,
     };
 
-    const platformNames: PlatformName[] = [
-      "Beehiiv",
-      "Substack",
-      "Kit",
-      "Ghost",
-    ];
+   const platformNames: PlatformName[] = [
+  "Beehiiv",
+  "Substack",
+  "Kit",
+  "Ghost",
+  "MailerLite",
+];
 
     for (let month = 0; month < months; month++) {
       const revenue = currentPaid * monthlyPrice;
@@ -230,6 +260,13 @@ if (platform === "Kit") {
         supported: supported.Ghost,
         note: "Publisher/Business hosting + Stripe. Modeled up to 10,000 members.",
       },
+      {
+  name: "MailerLite",
+  cost: totals.MailerLite,
+  supported: supported.MailerLite,
+  description:
+    "Comfort plan + Stripe processing for paid newsletters.",
+},
     ];
 
     const ranked = platforms
@@ -365,7 +402,7 @@ const countrySupported = creatorCountry === "US";
     </h1>
 
     <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 md:text-xl">
-      Compare Beehiiv, Substack, Kit and Ghost based on your audience,
+      Compare Beehiiv, Substack, Kit, Ghost and MailerLite based on your audience,
       paid subscribers and expected growth.
     </p>
 
@@ -384,8 +421,8 @@ const countrySupported = creatorCountry === "US";
       Free · No signup · Takes less than 60 seconds
     </p>
 
-    <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-4">
-      {["Beehiiv", "Substack", "Kit", "Ghost"].map((platform) => (
+    <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-5">
+      {["Beehiiv", "Substack", "Kit", "Ghost", "MailerLite"].map((platform) => (
         <div
           key={platform}
           className="rounded-xl border border-gray-200 bg-white px-4 py-4 font-semibold text-gray-700 shadow-sm"
@@ -477,6 +514,7 @@ const countrySupported = creatorCountry === "US";
                 <option value="Beehiiv">Beehiiv</option>
                 <option value="Kit">Kit</option>
                 <option value="Ghost">Ghost</option>
+                <option value="MailerLite">MailerLite</option>
               </select>
             </label>
 
