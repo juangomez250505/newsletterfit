@@ -55,8 +55,8 @@ export default function Home() {
   function kitCreatorPrice(subs: number) {
   if (subs <= 1000) return 33;
   if (subs <= 3000) return 49.17;
-  if (subs <= 5000) return 65.83;
-  if (subs <= 10000) return 92.50;
+  if (subs <= 5000) return 74.17;
+  if (subs <= 10000) return 115.83;
 
   return null;
 }
@@ -117,13 +117,31 @@ if (platform === "Kit") {
    if (platform === "Ghost") {
   let planCost: number;
 
+ if (paid === 0) {
   if (subs <= 1000) {
-    planCost = paid > 0 ? 29 : 18;
-  } else if (subs <= 10000) {
-    planCost = 199;
+    planCost = 18;
   } else {
     return null;
   }
+} else {
+  if (subs <= 1000) {
+    planCost = 29;
+  } else if (subs <= 2500) {
+    planCost = 46;
+  } else if (subs <= 5000) {
+    planCost = 63;
+  } else if (subs <= 7500) {
+    planCost = 79;
+  } else if (subs <= 10000) {
+    planCost = 88;
+  } else if (subs <= 25000) {
+    planCost = 141;
+  } else if (subs <= 50000) {
+    planCost = 208;
+  } else {
+    return null;
+  }
+}
 
   if (paid === 0) {
     return planCost;
