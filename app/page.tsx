@@ -1103,7 +1103,53 @@ const countrySupported = creatorCountry === "US";
 </a>
 
   </div>
+<div className="mt-12">
+  <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+    Newsletter guides
+  </p>
 
+  <h2 className="mt-3 text-3xl font-bold tracking-tight">
+    Find the right newsletter platform
+  </h2>
+
+  <div className="mt-6 grid gap-5 md:grid-cols-3">
+    <a
+      href="/best-newsletter-platform"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">
+        Best Newsletter Platforms
+      </h3>
+      <p className="mt-2 text-gray-600">
+        Compare our top platform picks for different types of creators.
+      </p>
+    </a>
+
+    <a
+      href="/best-newsletter-platform-for-beginners"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">
+        Best Platforms for Beginners
+      </h3>
+      <p className="mt-2 text-gray-600">
+        Easy and affordable options for starting your first newsletter.
+      </p>
+    </a>
+
+    <a
+      href="/best-platform-for-paid-newsletters"
+      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+    >
+      <h3 className="text-xl font-bold">
+        Best Platforms for Paid Newsletters
+      </h3>
+      <p className="mt-2 text-gray-600">
+        Compare fees and monetization options for paid subscribers.
+      </p>
+    </a>
+  </div>
+</div>
   <div className="mt-8">
     <a
       href="/substack-fee-calculator"

@@ -99,5 +99,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
   priority: 0.8,
 },
 
+{
+  url: "https://getnewsletterfit.com/best-newsletter-platform",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.9,
+},
+{
+  url: "https://getnewsletterfit.com/best-newsletter-platform-for-beginners",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.9,
+},
+{
+  url: "https://getnewsletterfit.com/best-platform-for-paid-newsletters",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.9,
+},
+
   ];
 }
