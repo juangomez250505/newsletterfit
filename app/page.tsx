@@ -1061,6 +1061,47 @@ const countrySupported = creatorCountry === "US";
         Email automation vs independent publishing.
       </p>
     </a>
+
+<a
+  href="/mailerlite-vs-beehiiv"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">MailerLite vs Beehiiv</h3>
+  <p className="mt-2 text-gray-600">
+    Email marketing and automation vs newsletter growth.
+  </p>
+</a>
+
+<a
+  href="/mailerlite-vs-kit"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">MailerLite vs Kit</h3>
+  <p className="mt-2 text-gray-600">
+    Compare pricing, automation and creator tools.
+  </p>
+</a>
+
+<a
+  href="/mailerlite-vs-substack"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">MailerLite vs Substack</h3>
+  <p className="mt-2 text-gray-600">
+    Fixed platform pricing vs subscription revenue share.
+  </p>
+</a>
+
+<a
+  href="/mailerlite-vs-ghost"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">MailerLite vs Ghost</h3>
+  <p className="mt-2 text-gray-600">
+    Email marketing automation vs independent publishing.
+  </p>
+</a>
+
   </div>
 
   <div className="mt-8">
