@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 
-type PlatformName =
-  | "Beehiiv"
-  | "Substack"
-  | "Kit"
-  | "Ghost"
-  | "MailerLite";
+type PlatformName = "Beehiiv" | "Substack" | "Kit" | "Ghost" | "MailerLite" | "GetResponse";
 
 const affiliateLinks: Partial<Record<PlatformName, string>> = {
   Beehiiv: "https://www.beehiiv.com/?via=newsletterfit",
@@ -74,6 +69,61 @@ function mailerLiteComfortPrice(subs: number) {
   if (subs <= 10000) return 80.1;
 
   return null;
+
+function getResponseStarterPrice(subs: number) {
+  if (subs <= 1000) return 15.58;
+  if (subs <= 2500) return 23.78;
+  if (subs <= 5000) return 44.28;
+  if (subs <= 10000) return 64.78;
+
+  return null;
+}
+
+function getResponseMarketerPrice(subs: number) {
+  if (subs <= 1000) return 48.38;
+  if (subs <= 2500) return 56.58;
+  if (subs <= 5000) return 77.9;
+  if (subs <= 10000) return 93.48;
+
+  return null;
+}
+
+function getResponseCreatorPrice(subs: number) {
+  if (subs <= 1000) return 56.58;
+  if (subs <= 2500) return 64.78;
+  if (subs <= 5000) return 89.38;
+  if (subs <= 10000) return 109.88;
+
+  return null;
+}
+
+}
+
+function getResponseStarterPrice(subs: number) {
+  if (subs <= 1000) return 15.58;
+  if (subs <= 2500) return 23.78;
+  if (subs <= 5000) return 44.28;
+  if (subs <= 10000) return 64.78;
+
+  return null;
+}
+
+function getResponseMarketerPrice(subs: number) {
+  if (subs <= 1000) return 48.38;
+  if (subs <= 2500) return 56.58;
+  if (subs <= 5000) return 77.9;
+  if (subs <= 10000) return 93.48;
+
+  return null;
+}
+
+function getResponseCreatorPrice(subs: number) {
+  if (subs <= 1000) return 56.58;
+  if (subs <= 2500) return 64.78;
+  if (subs <= 5000) return 89.38;
+  if (subs <= 10000) return 109.88;
+
+  return null;
 }
 
   function platformMonthlyCost(
@@ -128,6 +178,36 @@ if (platform === "Kit") {
 
   return revenue * 0.035 + paid * 0.3;
 }
+
+if (platform === "GetResponse") {
+  // Paid newsletters require the Creator plan.
+  if (paid > 0) {
+    const creatorPlan = getResponseCreatorPrice(subs);
+
+    if (creatorPlan === null) return null;
+
+    // GetResponse does not add a platform transaction fee.
+    // Standard US Stripe processing is modeled here.
+    return creatorPlan + revenue * 0.029 + paid * 0.3;
+  }
+
+  // Advanced automations use the Marketer plan.
+  if (needsAdvancedAutomations) {
+    const marketerPlan = getResponseMarketerPrice(subs);
+
+    if (marketerPlan === null) return null;
+
+    return marketerPlan;
+  }
+
+  // A standard free newsletter uses the Starter plan.
+  const starterPlan = getResponseStarterPrice(subs);
+
+  if (starterPlan === null) return null;
+
+  return starterPlan;
+}
+
 if (platform === "MailerLite") {
   const planCost =
     paid === 0 && subs <= 250
@@ -194,6 +274,7 @@ if (platform === "MailerLite") {
       Kit: 0,
       Ghost: 0,
       MailerLite: 0,
+      GetResponse: 0,
     };
 
     const supported: Record<PlatformName, boolean> = {
@@ -202,6 +283,7 @@ if (platform === "MailerLite") {
       Kit: true,
       Ghost: true,
       MailerLite: true,
+      GetResponse: true,
     };
 
    const platformNames: PlatformName[] = [
@@ -210,6 +292,8 @@ if (platform === "MailerLite") {
   "Kit",
   "Ghost",
   "MailerLite",
+  "GetResponse",
+
 ];
 
     for (let month = 0; month < months; month++) {
@@ -265,6 +349,13 @@ if (platform === "MailerLite") {
   cost: totals.MailerLite,
   supported: supported.MailerLite,
   note: "Comfort plan + Stripe processing for paid newsletters.",
+},
+
+{
+  name: "GetResponse",
+  cost: totals.GetResponse,
+  supported: supported.GetResponse,
+  note: "Starter, Marketer, or Creator plan based on your needs + Stripe processing for paid newsletters.",
 },
     ];
 
@@ -514,6 +605,7 @@ const countrySupported = creatorCountry === "US";
                 <option value="Kit">Kit</option>
                 <option value="Ghost">Ghost</option>
                 <option value="MailerLite">MailerLite</option>
+                <option value="GetResponse">GetResponse</option>
               </select>
             </label>
 
