@@ -100,6 +100,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
 },
 
 {
+  url: "https://getnewsletterfit.com/getresponse-vs-beehiiv",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+{
+  url: "https://getnewsletterfit.com/getresponse-vs-kit",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+{
+  url: "https://getnewsletterfit.com/getresponse-vs-mailerlite",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+{
+  url: "https://getnewsletterfit.com/getresponse-vs-substack",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+{
+  url: "https://getnewsletterfit.com/getresponse-vs-ghost",
+  lastModified: new Date(),
+  changeFrequency: "monthly",
+  priority: 0.8,
+},
+
+{
   url: "https://getnewsletterfit.com/best-newsletter-platform",
   lastModified: new Date(),
   changeFrequency: "monthly",

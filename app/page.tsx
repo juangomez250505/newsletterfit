@@ -1199,6 +1199,56 @@ const countrySupported = creatorCountry === "US";
   </p>
 </a>
 
+<a
+  href="/getresponse-vs-beehiiv"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">GetResponse vs Beehiiv</h3>
+  <p className="mt-2 text-gray-600">
+    Marketing automation vs newsletter-first growth and monetization.
+  </p>
+</a>
+
+<a
+  href="/getresponse-vs-kit"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">GetResponse vs Kit</h3>
+  <p className="mt-2 text-gray-600">
+    Advanced marketing tools vs a creator-focused newsletter platform.
+  </p>
+</a>
+
+<a
+  href="/getresponse-vs-mailerlite"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">GetResponse vs MailerLite</h3>
+  <p className="mt-2 text-gray-600">
+    Full marketing automation vs simple and affordable email marketing.
+  </p>
+</a>
+
+<a
+  href="/getresponse-vs-substack"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">GetResponse vs Substack</h3>
+  <p className="mt-2 text-gray-600">
+    Marketing automation vs simple publishing and paid newsletters.
+  </p>
+</a>
+
+<a
+  href="/getresponse-vs-ghost"
+  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+>
+  <h3 className="text-xl font-bold">GetResponse vs Ghost</h3>
+  <p className="mt-2 text-gray-600">
+    Marketing automation vs independent publishing and memberships.
+  </p>
+</a>
+
   </div>
 <div className="mt-12">
   <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
