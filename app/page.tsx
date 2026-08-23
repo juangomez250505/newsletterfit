@@ -631,9 +631,11 @@ const countrySupported = creatorCountry === "US";
 
               <input
                 type="number"
+                onFocus={(e) => e.currentTarget.select()}
                 value={subscribers}
                 onChange={(e) =>
                   setSubscribers(Number(e.target.value))
+          
                 }
                 className="w-full rounded-xl border border-gray-300 p-4"
               />
@@ -646,6 +648,7 @@ const countrySupported = creatorCountry === "US";
 
               <input
                 type="number"
+                onFocus={(e) => e.currentTarget.select()}
                 value={paidSubscribers}
                 onChange={(e) =>
                   setPaidSubscribers(Number(e.target.value))
@@ -661,6 +664,7 @@ const countrySupported = creatorCountry === "US";
 
               <input
                 type="number"
+                onFocus={(e) => e.currentTarget.select()}
                 value={monthlyPrice}
                 onChange={(e) =>
                   setMonthlyPrice(Number(e.target.value))
@@ -676,6 +680,7 @@ const countrySupported = creatorCountry === "US";
 
               <input
                 type="number"
+                onFocus={(e) => e.currentTarget.select()}
                 value={growth}
                 onChange={(e) =>
                   setGrowth(Number(e.target.value))
