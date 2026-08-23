@@ -95,10 +95,15 @@ export default function PrivacyPage() {
             </h2>
 
             <p className="mt-3">
-              NewsletterFit may use analytics or other third-party services in
-              the future to understand website traffic and improve the site.
-              This Privacy Policy may be updated when new services are added.
-            </p>
+  NewsletterFit uses Google Analytics to understand how visitors use
+  the website and to improve its content and functionality. Google
+  Analytics may collect information such as pages visited, session
+  activity, approximate geographic location, browser and device
+  information, and interactions with the site. Google Analytics may
+  use first-party cookies, including the _ga cookie, to distinguish
+  users and sessions. Google Analytics does not log or store
+  individual IP addresses.
+</p>
           </div>
 
           <div>
