@@ -492,7 +492,7 @@ const countrySupported = creatorCountry === "US";
     </h1>
 
     <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 md:text-xl">
-      Compare Beehiiv, Substack, Kit, Ghost and MailerLite based on your audience,
+       Compare Beehiiv, Substack, Kit, Ghost, MailerLite and GetResponse based on your audience,
       paid subscribers and expected growth.
     </p>
 
@@ -511,8 +511,8 @@ const countrySupported = creatorCountry === "US";
       Free · No signup · Takes less than 60 seconds
     </p>
 
-    <div className="mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-3 md:grid-cols-5">
-      {["Beehiiv", "Substack", "Kit", "Ghost", "MailerLite"].map((platform) => (
+   <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-6">
+  {["Beehiiv", "Substack", "Kit", "Ghost", "MailerLite", "GetResponse"].map((platform) => (
         <div
           key={platform}
           className="rounded-xl border border-gray-200 bg-white px-4 py-4 font-semibold text-gray-700 shadow-sm"
