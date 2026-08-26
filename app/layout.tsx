@@ -101,6 +101,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </p>
 
       <div className="flex flex-wrap gap-5">
+       <Link href="/about" className="hover:text-black">
+  About
+</Link>
         <Link href="/privacy" className="hover:text-black">
           Privacy
         </Link>
@@ -115,6 +118,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Affiliate Disclosure
         </Link>
+
+        <a
+  href="mailto:hello@getnewsletterfit.com"
+  className="hover:text-black"
+>
+  hello@getnewsletterfit.com
+</a>
       </div>
     </div>
   </footer>

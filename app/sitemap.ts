@@ -34,6 +34,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   changeFrequency: "yearly",
   priority: 0.3,
 },
+
+{
+  url: "https://getnewsletterfit.com/about",
+  lastModified: new Date(),
+  changeFrequency: "yearly",
+  priority: 0.5,
+},
+
 {
   url: "https://getnewsletterfit.com/privacy",
   lastModified: new Date(),
