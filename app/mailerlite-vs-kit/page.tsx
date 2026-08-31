@@ -194,6 +194,20 @@ export default function MailerLiteVsKitPage() {
             information directly with each provider before making a final
             decision.
           </p>
+        
+          <a
+            href="https://partners.kit.com/8lueyf7s9npm"
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+          >
+            Try Kit →
+          </a>
+
+          <p className="mt-3 text-xs text-gray-500">
+            Affiliate link. NewsletterFit may earn a commission at no extra cost to you.
+          </p>
+
         </section>
 
         <section className="mt-14 border-t border-gray-200 pt-10">

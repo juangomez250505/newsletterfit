@@ -308,6 +308,20 @@ export default function GetResponseVsKitPage() {
             automation, ecommerce workflows, funnels, webinars, or courses.
           </p>
 
+          
+          <a
+            href="https://partners.kit.com/8lueyf7s9npm"
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+          >
+            Try Kit →
+          </a>
+
+          <p className="mt-3 text-xs text-gray-500">
+            Affiliate link. NewsletterFit may earn a commission at no extra cost to you.
+          </p>
+
           <div className="mt-6">
             <Link
               href="/"

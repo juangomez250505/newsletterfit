@@ -280,6 +280,20 @@ export default function BeehiivVsKit() {
             advanced email automations, funnels, sequences, integrations and a
             generous free subscriber limit.
           </p>
+        
+          <a
+            href="https://partners.kit.com/8lueyf7s9npm"
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+          >
+            Try Kit →
+          </a>
+
+          <p className="mt-3 text-xs text-gray-500">
+            Affiliate link. NewsletterFit may earn a commission at no extra cost to you.
+          </p>
+
         </section>
 
         <section className="mt-16 rounded-3xl bg-gray-50 p-8">
