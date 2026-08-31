@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "GetResponse vs MailerLite: Which Is Better in 2026? | NewsletterFit",
+  title: "GetResponse vs MailerLite (2026): Pricing & Automation | NewsletterFit",
   description:
-    "Compare GetResponse vs MailerLite for newsletter pricing, paid subscriptions, automation, ecommerce, creator tools, and monetization.",
+  "Compare GetResponse vs MailerLite pricing, free plans, automation and newsletter features. See which is cheaper and which platform is better in 2026.",
   alternates: {
     canonical: "https://getnewsletterfit.com/getresponse-vs-mailerlite",
   },
@@ -27,7 +27,7 @@ export default function GetResponseVsMailerLitePage() {
           </p>
 
           <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-            GetResponse vs MailerLite: Which Is Better in 2026?
+            GetResponse vs MailerLite (2026): Pricing, Automation & Which Is Better?
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
@@ -159,7 +159,16 @@ export default function GetResponseVsMailerLitePage() {
         </section>
 
         <section className="mt-14">
-          <h2 className="text-3xl font-bold">Pricing</h2>
+          <h2 className="text-3xl font-bold">
+  GetResponse vs MailerLite pricing comparison
+</h2>
+
+<p className="mt-5 leading-7 text-slate-700">
+  MailerLite is cheaper at the entry level, with its paid plan starting at
+  about $10.80 per month when billed annually. GetResponse Starter begins at
+  $15.58 per month for up to 1,000 contacts, but includes a broader set of
+  marketing tools.
+</p>
 
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             <article className="rounded-2xl border border-slate-200 p-6">

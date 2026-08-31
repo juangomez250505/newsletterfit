@@ -383,6 +383,14 @@ export default function GetResponseVsKitPage() {
             >
               Best Newsletter Platforms →
             </Link>
+          
+            <Link
+              href="/getresponse-vs-mailerlite"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+            >
+              GetResponse vs MailerLite →
+            </Link>
+
           </div>
         </section>
       </section>
