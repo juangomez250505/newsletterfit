@@ -6,6 +6,7 @@ type PlatformName = "Beehiiv" | "Substack" | "Kit" | "Ghost" | "MailerLite" | "G
 
 const affiliateLinks: Partial<Record<PlatformName, string>> = {
   Beehiiv: "https://www.beehiiv.com/?via=newsletterfit",
+  Kit: "https://partners.kit.com/8lueyf7s9npm",
 };
 
 type PlatformResult = {
