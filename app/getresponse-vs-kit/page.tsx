@@ -22,11 +22,33 @@ export default function GetResponseVsKitPage() {
         </Link>
 
         <div className="mt-8 max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-700">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#2860B8]">
             Newsletter Platform Comparison
           </p>
 
-          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+          <div className="platform-comparison-logos mt-6 flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
+            <img
+              src="/logos/getresponse.png"
+              alt=""
+              className="h-8 w-8 object-contain"
+            />
+          </div>
+
+          <span className="text-sm font-bold uppercase tracking-wider text-slate-400">
+            vs
+          </span>
+
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
+            <img
+              src="/logos/kit.png"
+              alt=""
+              className="h-8 w-8 object-contain"
+            />
+          </div>
+        </div>
+
+        <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
             GetResponse vs Kit: Which Is Better in 2026?
           </h1>
 
@@ -292,7 +314,7 @@ export default function GetResponseVsKitPage() {
           </p>
         </section>
 
-        <section className="mt-14 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 sm:p-8">
+        <section className="mt-14 rounded-2xl border border-[#D9E5F7] bg-[#F3F7FD] p-6 sm:p-8">
           <h2 className="text-2xl font-bold">Our recommendation</h2>
 
           <p className="mt-4 leading-7 text-slate-700">
@@ -313,7 +335,7 @@ export default function GetResponseVsKitPage() {
             href="https://partners.kit.com/8lueyf7s9npm"
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
           >
             Try Kit →
           </a>
@@ -325,7 +347,7 @@ export default function GetResponseVsKitPage() {
           <div className="mt-6">
             <Link
               href="/"
-              className="inline-block rounded-xl bg-slate-900 px-5 py-3 text-center font-semibold text-white hover:bg-slate-700"
+              className="inline-block rounded-xl bg-black px-5 py-3 text-center font-semibold text-white brand-swipe"
             >
               Compare GetResponse and Kit costs →
             </Link>
@@ -344,49 +366,49 @@ export default function GetResponseVsKitPage() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             <Link
               href="/getresponse-vs-beehiiv"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               GetResponse vs Beehiiv →
             </Link>
 
             <Link
               href="/beehiiv-vs-kit"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               Beehiiv vs Kit →
             </Link>
 
             <Link
               href="/kit-vs-substack"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               Kit vs Substack →
             </Link>
 
             <Link
               href="/kit-vs-ghost"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               Kit vs Ghost →
             </Link>
 
             <Link
               href="/mailerlite-vs-kit"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               MailerLite vs Kit →
             </Link>
 
             <Link
               href="/best-newsletter-platform"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               Best Newsletter Platforms →
             </Link>
           
             <Link
               href="/getresponse-vs-mailerlite"
-              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-slate-50"
+              className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
             >
               GetResponse vs MailerLite →
             </Link>
@@ -394,6 +416,17 @@ export default function GetResponseVsKitPage() {
           </div>
         </section>
       </section>
-    </main>
+    
+      {/* SEO-ALL-COMPARISONS-LINK */}
+      <div className="mx-auto max-w-5xl px-6 pb-12">
+        <Link
+          href="/comparisons"
+          className="inline-flex items-center font-semibold text-[#2860B8] transition hover:translate-x-1"
+        >
+          View all newsletter platform comparisons →
+        </Link>
+      </div>
+
+</main>
   );
 }

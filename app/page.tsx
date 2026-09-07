@@ -9,6 +9,15 @@ const affiliateLinks: Partial<Record<PlatformName, string>> = {
   Kit: "https://partners.kit.com/8lueyf7s9npm",
 };
 
+const platformLogos: Record<PlatformName, string> = {
+  Beehiiv: "/logos/beehiiv.png",
+  Substack: "/logos/substack.png",
+  Kit: "/logos/kit.png",
+  Ghost: "/logos/ghost.png",
+  MailerLite: "/logos/mailerlite.png",
+  GetResponse: "/logos/getresponse.png",
+};
+
 type PlatformResult = {
   name: PlatformName;
   cost: number;
@@ -476,7 +485,7 @@ const countrySupported = creatorCountry === "US";
 
       <a
         href="#calculator"
-        className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-800"
+        className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white transition brand-swipe"
       >
         Compare Platforms
       </a>
@@ -484,7 +493,7 @@ const countrySupported = creatorCountry === "US";
   </div>
 
   <div className="mx-auto max-w-5xl px-6 pb-24 pt-16 text-center">
-    <div className="mx-auto mb-6 inline-flex rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm">
+    <div className="mx-auto mb-6 inline-flex rounded-full border border-[#D9E5F7] bg-[#F3F7FD] px-4 py-2 text-sm font-medium text-[#2860B8] shadow-sm">
       Free newsletter platform cost calculator
     </div>
 
@@ -502,26 +511,41 @@ const countrySupported = creatorCountry === "US";
     </p>
 
     <a
-      href="#calculator"
-      className="mt-10 inline-flex items-center rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-800"
-    >
-      Find My Best Platform →
-    </a>
+  href="#calculator"
+  className="group relative mt-10 inline-flex overflow-hidden rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:-translate-y-0.5 brand-swipe"
+>
+  <span className="absolute inset-y-0 left-0 w-0 bg-[#2860B8] transition-all duration-300 ease-out group-hover:w-full" />
+  <span className="relative z-10">
+    Find My Best Platform →
+  </span>
+</a>
 
     <p className="mt-4 text-sm text-gray-500">
       Free · No signup · Takes less than 60 seconds
     </p>
 
    <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-6">
-  {["Beehiiv", "Substack", "Kit", "Ghost", "MailerLite", "GetResponse"].map((platform) => (
-        <div
-          key={platform}
-          className="rounded-xl border border-gray-200 bg-white px-4 py-4 font-semibold text-gray-700 shadow-sm"
-        >
-          {platform}
-        </div>
-      ))}
+  {[
+    ["Beehiiv", "/logos/beehiiv.png"],
+    ["Substack", "/logos/substack.png"],
+    ["Kit", "/logos/kit.png"],
+    ["Ghost", "/logos/ghost.png"],
+    ["MailerLite", "/logos/mailerlite.png"],
+    ["GetResponse", "/logos/getresponse.png"],
+  ].map(([name, logo]) => (
+    <div
+      key={name}
+      className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-4 font-semibold text-gray-700 shadow-sm"
+    >
+      <img
+        src={logo}
+        alt=""
+        className="h-5 w-5 rounded-sm object-contain"
+      />
+      <span>{name}</span>
     </div>
+  ))}
+</div>
   </div>
       </section>
 
@@ -529,7 +553,7 @@ const countrySupported = creatorCountry === "US";
   <div className="mx-auto max-w-6xl px-6 py-16">
     <div className="grid gap-8 md:grid-cols-3">
       <div className="rounded-2xl border border-gray-200 p-6">
-        <p className="text-sm font-bold text-gray-500">01</p>
+        <p className="text-sm font-bold text-[#2860B8]">01</p>
 
         <h3 className="mt-3 text-xl font-bold">
           Enter your numbers
@@ -541,7 +565,7 @@ const countrySupported = creatorCountry === "US";
       </div>
 
       <div className="rounded-2xl border border-gray-200 p-6">
-        <p className="text-sm font-bold text-gray-500">02</p>
+        <p className="text-sm font-bold text-[#2860B8]">02</p>
 
         <h3 className="mt-3 text-xl font-bold">
           We compare the real costs
@@ -553,7 +577,7 @@ const countrySupported = creatorCountry === "US";
       </div>
 
       <div className="rounded-2xl border border-gray-200 p-6">
-        <p className="text-sm font-bold text-gray-500">03</p>
+        <p className="text-sm font-bold text-[#2860B8]">03</p>
 
         <h3 className="mt-3 text-xl font-bold">
           See your best fit
@@ -575,7 +599,7 @@ const countrySupported = creatorCountry === "US";
 
      <section id="calculator" className="mx-auto max-w-5xl px-6 py-20">
 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-xl shadow-gray-200/50 md:p-10">
-          <div className="mb-5 inline-flex rounded-full bg-gray-100 px-3 py-1 text-xs font-bold uppercase tracking-wide text-gray-600">
+          <div className="mb-5 inline-flex rounded-full bg-[#F3F7FD] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#2860B8]">
   Personalized cost analysis
 </div>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
@@ -750,7 +774,7 @@ const countrySupported = creatorCountry === "US";
           <button
            disabled={invalid || !countrySupported}
             onClick={() => setShowResults(true)}
-            className="mt-8 w-full rounded-xl bg-black px-6 py-4 text-lg font-semibold text-white disabled:opacity-40"
+            className="mt-8 w-full rounded-xl bg-black px-6 py-4 text-lg font-semibold text-white transition disabled:opacity-40 brand-swipe"
           >
             Compare My Platforms
           </button>
@@ -771,9 +795,16 @@ const countrySupported = creatorCountry === "US";
         #1 Best fit based on your inputs
       </div>
 
-      <h2 className="mt-5 text-5xl font-bold tracking-tight">
-        {winner.name}
-      </h2>
+      <div className="mt-5 flex items-center justify-center gap-3">
+        <img
+          src={platformLogos[winner.name]}
+          alt=""
+          className="h-10 w-10 rounded-md object-contain"
+        />
+        <h2 className="text-5xl font-bold tracking-tight">
+          {winner.name}
+        </h2>
+      </div>
 
       <p className="mx-auto mt-4 max-w-2xl text-lg leading-7 text-gray-600">
         Based on the pricing, payment fees, audience size and growth assumptions
@@ -817,7 +848,7 @@ const countrySupported = creatorCountry === "US";
     href={affiliateLinks[winner.name]}
     target="_blank"
     rel="sponsored noopener noreferrer"
-    className="inline-block rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white"
+    className="inline-block rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white brand-swipe"
   >
     Explore {winner.name} →
   </a>
@@ -825,7 +856,7 @@ const countrySupported = creatorCountry === "US";
   <button
     type="button"
     disabled
-    className="rounded-xl bg-gray-300 px-8 py-4 text-lg font-semibold text-gray-600"
+    className="rounded-xl bg-gray-300 px-8 py-4 text-lg font-semibold text-gray-600 brand-swipe"
   >
     Explore {winner.name} →
   </button>
@@ -850,7 +881,7 @@ const countrySupported = creatorCountry === "US";
 
               {winner && currentPlatformResult && (
   <div className="mt-6 rounded-3xl border border-gray-200 p-7 text-center">
-    <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+    <p className="text-sm font-bold uppercase tracking-wide text-[#2860B8]">
       Compared with your current platform
     </p>
 
@@ -884,7 +915,7 @@ const countrySupported = creatorCountry === "US";
 )}
 
               <div className="mt-8 rounded-3xl border border-gray-200 p-7">
-                <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+                <p className="text-sm font-bold uppercase tracking-wide text-[#2860B8]">
                   When should you switch?
                 </p>
 
@@ -1003,9 +1034,16 @@ const countrySupported = creatorCountry === "US";
                             #{index + 1}
                           </p>
 
-                          <p className="mt-1 text-2xl font-bold">
-                            {platform.name}
-                          </p>
+                          <div className="mt-1 flex items-center gap-3">
+                            <img
+                              src={platformLogos[platform.name]}
+                              alt=""
+                              className="h-7 w-7 rounded-sm object-contain"
+                            />
+                            <p className="text-2xl font-bold">
+                              {platform.name}
+                            </p>
+                          </div>
 
                           <p className="mt-2 max-w-xl text-sm text-gray-600">
                             {platform.note}
@@ -1083,229 +1121,88 @@ const countrySupported = creatorCountry === "US";
         </div>
       </section>
 
+
+
+    
 <section className="mx-auto max-w-6xl px-6 py-16">
   <div className="max-w-2xl">
-    <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-      Compare platforms
+    <p className="text-sm font-bold uppercase tracking-wide text-[#2860B8]">
+      Newsletter guides
     </p>
 
     <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-      Compare newsletter platforms side by side
+      Find the right newsletter platform
     </h2>
 
     <p className="mt-4 text-lg leading-8 text-gray-600">
-      Explore detailed comparisons between the most popular newsletter
-      platforms and find the best fit for your audience and business model.
+      Explore our main guides to find the newsletter platform that best fits
+      your experience, audience and monetization goals.
     </p>
   </div>
 
-  <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-    <a
-      href="/beehiiv-vs-substack"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Beehiiv vs Substack</h3>
-      <p className="mt-2 text-gray-600">
-        Compare fees, monetization and growth tools.
-      </p>
-    </a>
-
-    <a
-      href="/beehiiv-vs-kit"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Beehiiv vs Kit</h3>
-      <p className="mt-2 text-gray-600">
-        Newsletter growth tools vs creator email automation.
-      </p>
-    </a>
-
-    <a
-      href="/beehiiv-vs-ghost"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Beehiiv vs Ghost</h3>
-      <p className="mt-2 text-gray-600">
-        Compare newsletter growth with publishing control.
-      </p>
-    </a>
-
-    <a
-      href="/kit-vs-substack"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Kit vs Substack</h3>
-      <p className="mt-2 text-gray-600">
-        Compare automation, simplicity and subscription fees.
-      </p>
-    </a>
-
-    <a
-      href="/substack-vs-ghost"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Substack vs Ghost</h3>
-      <p className="mt-2 text-gray-600">
-        Revenue share vs fixed-cost independent publishing.
-      </p>
-    </a>
-
-    <a
-      href="/kit-vs-ghost"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
-    >
-      <h3 className="text-xl font-bold">Kit vs Ghost</h3>
-      <p className="mt-2 text-gray-600">
-        Email automation vs independent publishing.
-      </p>
-    </a>
-
-<a
-  href="/mailerlite-vs-beehiiv"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">MailerLite vs Beehiiv</h3>
-  <p className="mt-2 text-gray-600">
-    Email marketing and automation vs newsletter growth.
-  </p>
-</a>
-
-<a
-  href="/mailerlite-vs-kit"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">MailerLite vs Kit</h3>
-  <p className="mt-2 text-gray-600">
-    Compare pricing, automation and creator tools.
-  </p>
-</a>
-
-<a
-  href="/mailerlite-vs-substack"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">MailerLite vs Substack</h3>
-  <p className="mt-2 text-gray-600">
-    Fixed platform pricing vs subscription revenue share.
-  </p>
-</a>
-
-<a
-  href="/mailerlite-vs-ghost"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">MailerLite vs Ghost</h3>
-  <p className="mt-2 text-gray-600">
-    Email marketing automation vs independent publishing.
-  </p>
-</a>
-
-<a
-  href="/getresponse-vs-beehiiv"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">GetResponse vs Beehiiv</h3>
-  <p className="mt-2 text-gray-600">
-    Marketing automation vs newsletter-first growth and monetization.
-  </p>
-</a>
-
-<a
-  href="/getresponse-vs-kit"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">GetResponse vs Kit</h3>
-  <p className="mt-2 text-gray-600">
-    Advanced marketing tools vs a creator-focused newsletter platform.
-  </p>
-</a>
-
-<a
-  href="/getresponse-vs-mailerlite"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">GetResponse vs MailerLite</h3>
-  <p className="mt-2 text-gray-600">
-    Full marketing automation vs simple and affordable email marketing.
-  </p>
-</a>
-
-<a
-  href="/getresponse-vs-substack"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">GetResponse vs Substack</h3>
-  <p className="mt-2 text-gray-600">
-    Marketing automation vs simple publishing and paid newsletters.
-  </p>
-</a>
-
-<a
-  href="/getresponse-vs-ghost"
-  className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
->
-  <h3 className="text-xl font-bold">GetResponse vs Ghost</h3>
-  <p className="mt-2 text-gray-600">
-    Marketing automation vs independent publishing and memberships.
-  </p>
-</a>
-
-  </div>
-<div className="mt-12">
-  <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-    Newsletter guides
-  </p>
-
-  <h2 className="mt-3 text-3xl font-bold tracking-tight">
-    Find the right newsletter platform
-  </h2>
-
-  <div className="mt-6 grid gap-5 md:grid-cols-3">
+  <div className="mt-8 grid gap-5 md:grid-cols-3">
     <a
       href="/best-newsletter-platform"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+      className="brand-card-swipe rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
     >
       <h3 className="text-xl font-bold">
         Best Newsletter Platforms
       </h3>
+
       <p className="mt-2 text-gray-600">
         Compare our top platform picks for different types of creators.
+      </p>
+
+      <p className="mt-5 text-sm font-bold">
+        Read guide →
       </p>
     </a>
 
     <a
       href="/best-newsletter-platform-for-beginners"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+      className="brand-card-swipe rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
     >
       <h3 className="text-xl font-bold">
         Best Platforms for Beginners
       </h3>
+
       <p className="mt-2 text-gray-600">
         Easy and affordable options for starting your first newsletter.
+      </p>
+
+      <p className="mt-5 text-sm font-bold">
+        Read guide →
       </p>
     </a>
 
     <a
       href="/best-platform-for-paid-newsletters"
-      className="rounded-2xl border border-gray-200 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+      className="brand-card-swipe rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
     >
       <h3 className="text-xl font-bold">
         Best Platforms for Paid Newsletters
       </h3>
+
       <p className="mt-2 text-gray-600">
         Compare fees and monetization options for paid subscribers.
       </p>
+
+      <p className="mt-5 text-sm font-bold">
+        Read guide →
+      </p>
     </a>
   </div>
-</div>
+
+  {/* SEO-COMPARISONS-HUB-LINK */}
   <div className="mt-8">
     <a
-      href="/substack-fee-calculator"
-      className="font-semibold underline"
+      href="/comparisons"
+      className="inline-flex items-center font-semibold text-[#2860B8] transition hover:translate-x-1"
     >
-      Calculate Substack fees →
+      View all newsletter platform comparisons →
     </a>
   </div>
+
 </section>
 
     </main>

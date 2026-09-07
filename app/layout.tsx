@@ -4,6 +4,7 @@ import "./globals.css";
 import Link from "next/link";
 import Script from "next/script";
 import CookieConsent from "./components/CookieConsent";
+import SideMenu from "./components/SideMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body>
+        <SideMenu />
     <Script id="google-consent-default" strategy="beforeInteractive">
   {`
     window.dataLayer = window.dataLayer || [];
@@ -104,27 +106,27 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </p>
 
       <div className="flex flex-wrap gap-5">
-       <Link href="/about" className="hover:text-black">
+       <Link href="/about" className="hover:text-[#2860B8]">
   About
 </Link>
-        <Link href="/privacy" className="hover:text-black">
+        <Link href="/privacy" className="hover:text-[#2860B8]">
           Privacy
         </Link>
 
-        <Link href="/terms" className="hover:text-black">
+        <Link href="/terms" className="hover:text-[#2860B8]">
           Terms
         </Link>
 
         <Link
           href="/affiliate-disclosure"
-          className="hover:text-black"
+          className="hover:text-[#2860B8]"
         >
           Affiliate Disclosure
         </Link>
 
         <a
   href="mailto:hello@getnewsletterfit.com"
-  className="hover:text-black"
+  className="hover:text-[#2860B8]"
 >
   hello@getnewsletterfit.com
 </a>

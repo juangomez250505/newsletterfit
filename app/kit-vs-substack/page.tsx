@@ -21,7 +21,7 @@ export default function KitVsSubstackPage() {
 
           <Link
             href="/#calculator"
-            className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white"
+            className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white brand-swipe"
           >
             Free Calculator
           </Link>
@@ -32,6 +32,28 @@ export default function KitVsSubstackPage() {
         <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
           Platform comparison
         </p>
+
+        <div className="platform-comparison-logos mt-6 flex items-center gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
+            <img
+              src="/logos/kit.png"
+              alt=""
+              className="h-8 w-8 object-contain"
+            />
+          </div>
+
+          <span className="text-sm font-bold uppercase tracking-wider text-slate-400">
+            vs
+          </span>
+
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-white shadow-sm">
+            <img
+              src="/logos/substack.png"
+              alt=""
+              className="h-8 w-8 object-contain"
+            />
+          </div>
+        </div>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
           Kit vs Substack: Which newsletter platform is better?
@@ -192,7 +214,7 @@ export default function KitVsSubstackPage() {
 
           <Link
             href="/#calculator"
-            className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black"
+            className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black brand-swipe"
           >
             Compare newsletter platforms →
           </Link>
@@ -218,7 +240,7 @@ export default function KitVsSubstackPage() {
             href="https://partners.kit.com/8lueyf7s9npm"
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
           >
             Try Kit →
           </a>
@@ -235,21 +257,21 @@ export default function KitVsSubstackPage() {
   <div className="mt-5 flex flex-wrap gap-4">
     <Link
       href="/beehiiv-vs-kit"
-      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
     >
       Beehiiv vs Kit →
     </Link>
 
     <Link
       href="/beehiiv-vs-substack"
-      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
     >
       Beehiiv vs Substack →
     </Link>
 
     <Link
       href="/kit-vs-ghost"
-      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
     >
       Kit vs Ghost →
     </Link>
@@ -257,6 +279,17 @@ export default function KitVsSubstackPage() {
 </section>
 
       </article>
-    </main>
+    
+      {/* SEO-ALL-COMPARISONS-LINK */}
+      <div className="mx-auto max-w-5xl px-6 pb-12">
+        <Link
+          href="/comparisons"
+          className="inline-flex items-center font-semibold text-[#2860B8] transition hover:translate-x-1"
+        >
+          View all newsletter platform comparisons →
+        </Link>
+      </div>
+
+</main>
   );
 }

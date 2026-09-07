@@ -22,7 +22,7 @@ export default function SubstackFeeCalculator() {
 
           <Link
             href="/#calculator"
-            className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white"
+            className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white brand-swipe"
           >
             Compare Platforms
           </Link>
@@ -72,7 +72,7 @@ export default function SubstackFeeCalculator() {
 
           <Link
             href="/#calculator"
-            className="mt-7 inline-block rounded-xl bg-black px-7 py-4 text-lg font-semibold text-white"
+            className="mt-7 inline-block rounded-xl bg-black px-7 py-4 text-lg font-semibold text-white brand-swipe"
           >
             Compare My Platforms →
           </Link>

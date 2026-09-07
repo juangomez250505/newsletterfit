@@ -25,7 +25,7 @@ export default function BestNewsletterPlatformPage() {
 
           <Link
             href="/#calculator"
-            className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white"
+            className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white brand-swipe"
           >
             Free Calculator
           </Link>
@@ -176,7 +176,7 @@ export default function BestNewsletterPlatformPage() {
             href={BEEHIIV_AFFILIATE_URL}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white"
+            className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
           >
             Try Beehiiv →
           </a>
@@ -314,7 +314,7 @@ export default function BestNewsletterPlatformPage() {
 
           <Link
             href="/#calculator"
-            className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black"
+            className="mt-6 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-black brand-swipe"
           >
             Find my best newsletter platform →
           </Link>
@@ -359,28 +359,28 @@ export default function BestNewsletterPlatformPage() {
           <div className="mt-5 flex flex-wrap gap-4">
             <Link
               href="/mailerlite-vs-beehiiv"
-              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
             >
               MailerLite vs Beehiiv →
             </Link>
 
             <Link
               href="/beehiiv-vs-kit"
-              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
             >
               Beehiiv vs Kit →
             </Link>
 
             <Link
               href="/beehiiv-vs-substack"
-              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
             >
               Beehiiv vs Substack →
             </Link>
 
             <Link
               href="/substack-vs-ghost"
-              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:bg-gray-50"
+              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
             >
               Substack vs Ghost →
             </Link>
