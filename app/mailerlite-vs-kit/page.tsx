@@ -216,7 +216,7 @@ export default function MailerLiteVsKitPage() {
             information directly with each provider before making a final
             decision.
           </p>
-        
+
           <a
             href="https://partners.kit.com/8lueyf7s9npm"
             target="_blank"
@@ -258,8 +258,30 @@ export default function MailerLiteVsKitPage() {
             </Link>
           </div>
         </section>
+
+        {/* SEO-INTERNAL-CONVERTKIT-SUBSTACK-20260914 */}
+        <section className="mt-14 border-t border-slate-200 pt-10">
+          <h2 className="text-2xl font-bold">
+            Comparing ConvertKit with Substack too?
+          </h2>
+
+          <p className="mt-4 leading-7 text-slate-700">
+            Kit was formerly known as ConvertKit. If Substack is another option
+            you are considering, see our{" "}
+            <Link
+              href="/kit-vs-substack"
+              className="font-semibold text-[#2860B8] underline underline-offset-4"
+            >
+              ConvertKit vs Substack
+            </Link>{" "}
+            comparison for fees, paid newsletters, automation and creator
+            tools.
+          </p>
+        </section>
+
+
       </article>
-    
+
       {/* SEO-ALL-COMPARISONS-LINK */}
       <div className="mx-auto max-w-5xl px-6 pb-12">
         <Link

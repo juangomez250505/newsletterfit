@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ConvertKit (Kit) vs GetResponse: Which Is Better in 2026? | NewsletterFit",
+  title: "ConvertKit vs GetResponse (2026): Pricing, Fees & Automation | NewsletterFit",
   description:
     "Compare ConvertKit (now Kit) vs GetResponse for pricing, automation, paid newsletters, creator tools, and monetization. See which platform is better for you.",
   alternates: {
@@ -49,11 +49,11 @@ export default function GetResponseVsKitPage() {
         </div>
 
         <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-            GetResponse vs Kit (formerly ConvertKit): Which Is Better in 2026?
+            ConvertKit vs GetResponse (Kit): Which Is Better in 2026?
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Kit, formerly known as ConvertKit, is built around creators,
+            ConvertKit is now called Kit. It is built around creators,
             newsletters, audience growth, and selling directly to subscribers.
             GetResponse combines email marketing with advanced automation,
             ecommerce, funnels, webinars, courses, and premium newsletters.
@@ -453,7 +453,7 @@ export default function GetResponseVsKitPage() {
             automation, ecommerce workflows, funnels, webinars, or courses.
           </p>
 
-          
+
           <a
             href="https://partners.kit.com/8lueyf7s9npm"
             target="_blank"
@@ -528,7 +528,7 @@ export default function GetResponseVsKitPage() {
             >
               Best Newsletter Platforms →
             </Link>
-          
+
             <Link
               href="/getresponse-vs-mailerlite"
               className="rounded-xl border border-slate-200 p-5 font-semibold hover:bg-[#F3F7FD]"
@@ -539,7 +539,7 @@ export default function GetResponseVsKitPage() {
           </div>
         </section>
       </section>
-    
+
       {/* SEO-ALL-COMPARISONS-LINK */}
       <div className="mx-auto max-w-5xl px-6 pb-12">
         <Link
