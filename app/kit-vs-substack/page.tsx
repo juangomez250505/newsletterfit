@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Kit vs Substack (2026): Fees, Features & Best Choice | NewsletterFit",
+  title: "ConvertKit vs Substack (2026): Fees & Features | NewsletterFit",
   description:
-    "Compare Kit vs Substack for paid newsletters, creator tools, fees and automation. See which platform fits your newsletter better.",
+    "Compare ConvertKit (now Kit) vs Substack for fees, paid newsletters, automation and creator tools. See which platform keeps more of your revenue.",
   alternates: {
     canonical: "/kit-vs-substack",
   },
@@ -56,14 +56,21 @@ export default function KitVsSubstackPage() {
         </div>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-          Kit vs Substack: Which newsletter platform is better?
+          Kit (formerly ConvertKit) vs Substack: Which Is Better in 2026?
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Kit and Substack can both work for newsletter creators, but they are
-          built for different types of businesses. Substack focuses on
-          simplicity and paid subscriptions, while Kit gives creators more
-          control over email marketing, automations and audience management.
+          Kit, formerly known as ConvertKit, and Substack can both work for
+          newsletter creators, but they are built for different types of
+          businesses. If you are comparing ConvertKit vs Substack, the biggest
+          differences are fees, automation, audience ownership and how each
+          platform helps you monetize. Substack focuses on simple publishing
+          and paid subscriptions, while Kit gives creators more control over
+          email marketing, automations and audience management.
+        </p>
+
+        <p className="mt-4 text-sm text-gray-500">
+          Last reviewed: September 2026
         </p>
 
         <section className="mt-12 rounded-2xl bg-gray-50 p-8">
@@ -82,7 +89,9 @@ export default function KitVsSubstackPage() {
         </section>
 
         <section className="mt-14">
-          <h2 className="text-3xl font-bold">Kit vs Substack at a glance</h2>
+          <h2 className="text-3xl font-bold">
+            ConvertKit (Kit) vs Substack at a glance
+          </h2>
 
           <div className="mt-6 overflow-x-auto">
             <table className="w-full border-collapse text-left">
@@ -103,12 +112,14 @@ export default function KitVsSubstackPage() {
 
                 <tr className="border-b border-gray-200">
                   <td className="py-4 pr-6 font-semibold">
-                    Platform fee on subscriptions
+                    Paid newsletter transaction fees
                   </td>
                   <td className="py-4 pr-6">
-                    No standard percentage platform fee
+                    3.5% + $0.30 per USD transaction, including card processing
                   </td>
-                  <td className="py-4">10%</td>
+                  <td className="py-4">
+                    10% platform fee + payment processing
+                  </td>
                 </tr>
 
                 <tr className="border-b border-gray-200">
@@ -144,30 +155,109 @@ export default function KitVsSubstackPage() {
         </section>
 
         <section className="mt-14">
-          <h2 className="text-3xl font-bold">The biggest difference: fees</h2>
+          <h2 className="text-3xl font-bold">
+            ConvertKit vs Substack fees: how much do you actually keep?
+          </h2>
 
           <p className="mt-5 text-lg leading-8 text-gray-700">
-            Substack charges a 10% platform fee on paid subscription revenue,
-            in addition to payment processing fees. That is simple when your
-            newsletter is small, but it can become expensive as revenue grows.
+            Fees are one of the biggest differences between Kit and Substack.
+            Substack charges creators 10% of each paid subscription transaction,
+            and payment processing fees are charged on top of that.
           </p>
 
           <p className="mt-5 text-lg leading-8 text-gray-700">
-            Kit uses a different model. You may pay for a Kit plan depending
-            on your audience size and features, but it does not use the same
-            10% revenue-share model as Substack.
+            Kit uses a different model. Its paid newsletters and recurring
+            subscriptions cost 3.5% + $0.30 per USD transaction, and that fee
+            already includes card processing. Kit Commerce is also available
+            on the Free plan, so you can start charging subscribers without
+            first paying a monthly software subscription.
+          </p>
+
+          <h3 className="mt-8 text-2xl font-bold">
+            Example: 100 paid subscribers at $10/month
+          </h3>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            With 100 subscribers paying $10 per month, your newsletter produces
+            $1,000 in monthly gross subscription revenue.
+          </p>
+
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-gray-200">
+            <table className="w-full min-w-[700px] text-left">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-5 py-4 font-semibold">Platform</th>
+                  <th className="px-5 py-4 font-semibold">Gross revenue</th>
+                  <th className="px-5 py-4 font-semibold">Estimated fees</th>
+                  <th className="px-5 py-4 font-semibold">Estimated net</th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-5 py-4 font-semibold">
+                    Kit / ConvertKit
+                  </td>
+                  <td className="px-5 py-4">$1,000</td>
+                  <td className="px-5 py-4">About $65</td>
+                  <td className="px-5 py-4">
+                    <strong>About $935</strong>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="px-5 py-4 font-semibold">Substack</td>
+                  <td className="px-5 py-4">$1,000</td>
+                  <td className="px-5 py-4">
+                    $100 Substack fee + payment processing
+                  </td>
+                  <td className="px-5 py-4">
+                    Less than $900 after the Substack fee, before processing
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p className="mt-5 leading-7 text-gray-700">
+            In this example, Kit&apos;s 3.5% + $0.30 transaction charge works
+            out to about $65 across 100 monthly $10 payments. Substack&apos;s
+            10% platform fee alone is $100 before Stripe processing is added.
+            The difference becomes more important as paid newsletter revenue
+            grows.
           </p>
 
           <div className="mt-8 rounded-2xl border border-gray-200 p-7">
             <h3 className="text-xl font-bold">
-              Example: $2,000/month in paid subscriptions
+              What happens at $2,000/month?
             </h3>
 
             <p className="mt-3 leading-7 text-gray-700">
-              A 10% Substack platform fee alone would equal approximately{" "}
-              <strong>$200 per month</strong>, before payment processing fees.
+              At $2,000 in monthly paid subscription revenue, Substack&apos;s
+              10% platform fee alone equals <strong>$200 every month</strong>,
+              or <strong>$2,400 per year</strong>, before payment processing.
+              This is why creators with growing paid revenue should compare
+              percentage-based fees instead of looking only at monthly plan
+              prices.
             </p>
           </div>
+
+          <p className="mt-6 leading-7 text-gray-700">
+            Want to test your own subscriber count and subscription price?{" "}
+            <Link
+              href="/substack-fee-calculator"
+              className="font-semibold text-[#2860B8] underline underline-offset-4"
+            >
+              Calculate your Substack fees
+            </Link>{" "}
+            and compare the cost using your own numbers.
+          </p>
+
+          <p className="mt-3 text-sm text-gray-500">
+            Fees reviewed in September 2026. Kit&apos;s USD transaction fee
+            includes card processing. Substack payment-processing costs can
+            vary by country and payment method.
+          </p>
         </section>
 
         <section className="mt-14">
