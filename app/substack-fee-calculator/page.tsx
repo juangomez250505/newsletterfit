@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   alternates: {
   canonical: "/substack-fee-calculator",
 },
-  title: "Substack Fee Calculator (2026): Fees & Earnings | NewsletterFit",
-  description: "Calculate Substack fees and see how much Substack takes from paid subscriptions. Compare fees at different subscriber counts and subscription prices.",
+  title: "Substack Fee Calculator (2026): 10% Fee + Stripe | NewsletterFit",
+  description: "Calculate Substack fees, its 10% platform cut and estimated payment processing. See what you keep at different paid subscriber levels.",
 };
 
 export default function SubstackFeeCalculator() {
@@ -30,7 +30,7 @@ export default function SubstackFeeCalculator() {
 
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
         <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-          Free Calculator · Updated August 2026
+          Free Calculator · Updated September 2026
         </p>
 
         <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
@@ -93,6 +93,38 @@ export default function SubstackFeeCalculator() {
       </section>
 
         {/* SEO-SUBSTACK-FEE-EXPANSION-20260914 */}
+        <section className="mt-12 rounded-3xl bg-gray-50 p-8">
+          <h2 className="text-3xl font-bold">
+            How the Substack fee calculation works
+          </h2>
+
+          <p className="mt-5 leading-7 text-gray-700">
+            Substack currently charges creators 10% of paid subscription
+            transactions. Payment processing is handled separately by Stripe,
+            so your total cost is higher than the 10% platform fee alone.
+          </p>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            NewsletterFit uses your number of paid subscribers and subscription
+            price to estimate monthly subscription revenue and fees. Actual
+            payment-processing costs can vary by country, currency and payment
+            method.
+          </p>
+
+          <p className="mt-5 text-sm leading-6 text-gray-500">
+            Source:{" "}
+            <a
+              href="https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Substack official fee documentation
+            </a>
+            .
+          </p>
+        </section>
+
         <section className="mt-16 border-t border-gray-200 pt-12">
           <h2 className="text-3xl font-bold">
             How much does Substack take?

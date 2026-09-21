@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   alternates: {
   canonical: "/beehiiv-vs-substack",
 },
-  title: "Beehiiv vs Substack (2026): Fees, Break-Even & Best Choice | NewsletterFit",
-  description: "Compare Beehiiv vs Substack fees, pricing and paid newsletter economics. See the revenue level where Beehiiv can become cheaper than Substack.",
+  title: "Beehiiv vs Substack (2026): Pricing, Fees & Break-Even | NewsletterFit",
+  description: "Compare Beehiiv vs Substack pricing, fees and paid newsletter economics with real $500, $1K, $2K and $5K revenue examples.",
 };
 
 export default function BeehiivVsSubstack() {
@@ -32,7 +32,7 @@ export default function BeehiivVsSubstack() {
 
       <article className="mx-auto max-w-4xl px-6 py-16">
         <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-          Platform Comparison · Updated August 2026
+          Platform Comparison · Updated September 2026
         </p>
 
         <div className="platform-comparison-logos mt-6 flex items-center gap-3">
@@ -231,121 +231,8 @@ export default function BeehiivVsSubstack() {
           </p>
         </section>
 
-        <section className="mt-16 rounded-3xl border border-gray-200 p-8">
-          <h2 className="text-3xl font-bold">
-            So when does Beehiiv become cheaper?
-          </h2>
-
-          <p className="mt-4 text-lg leading-8 text-gray-600">
-            That's exactly why we built NewsletterFit. The answer changes
-            depending on how many subscribers you have, how many pay, what
-            they pay and how quickly your newsletter grows.
-          </p>
-
-          <Link
-            href="/#calculator"
-            className="mt-7 inline-block rounded-xl bg-black px-7 py-4 text-lg font-semibold text-white brand-swipe"
-          >
-            Find My Break-Even Point →
-          </Link>
-        </section>
-
-        <section className="mt-16">
-          <h2 className="text-3xl font-bold">
-            Who should choose Beehiiv?
-          </h2>
-
-          <p className="mt-5 text-lg leading-8 text-gray-600">
-            Beehiiv generally becomes more interesting when you're treating
-            your newsletter like a business and care heavily about growth,
-            monetization and keeping more of your paid subscription revenue.
-          </p>
-
-          <a
-  href={BEEHIIV_AFFILIATE_URL}
-  target="_blank"
-  rel="sponsored noopener noreferrer"
-  className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
->
-  Try Beehiiv →
-</a>
-
-<p className="mt-3 text-xs text-gray-500">
-  Affiliate link. NewsletterFit may earn a commission at no extra cost to you.
-</p>
-
-          <h2 className="mt-12 text-3xl font-bold">
-            Who should choose Substack?
-          </h2>
-
-          <p className="mt-5 text-lg leading-8 text-gray-600">
-            Substack can make more sense when you want to start quickly,
-            minimize fixed costs and value its publishing, community and
-            built-in reader ecosystem.
-          </p>
-        </section>
-
-        <section className="mt-16 rounded-3xl bg-gray-50 p-8">
-          <h2 className="text-3xl font-bold">
-            Don't guess. Calculate it.
-          </h2>
-
-          <p className="mt-4 text-lg text-gray-600">
-            NewsletterFit compares your projected costs across Beehiiv,
-            Substack, Kit and Ghost using your actual audience and revenue
-            assumptions.
-          </p>
-
-          <Link
-            href="/#calculator"
-            className="mt-7 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
-          >
-            Use NewsletterFit Free →
-          </Link>
-        </section>
-
-        <section className="mt-16 border-t border-gray-200 pt-8">
-          <p className="text-sm leading-6 text-gray-500">
-            Pricing checked August 2026. Platform features and pricing can
-            change. NewsletterFit is an independent comparison tool and is not
-            affiliated with Beehiiv or Substack.
-          </p>
-
-          <p className="mt-3 text-sm text-gray-500">
-            Sources: official Beehiiv and Substack pricing and comparison
-            documentation.
-          </p>
-        </section>
-
-<section className="mt-14 border-t border-gray-200 pt-10">
-  <h2 className="text-2xl font-bold">Related comparisons</h2>
-
-  <div className="mt-5 flex flex-wrap gap-4">
-    <Link
-      href="/beehiiv-vs-kit"
-      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
-    >
-      Beehiiv vs Kit →
-    </Link>
-
-    <Link
-      href="/beehiiv-vs-ghost"
-      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
-    >
-      Beehiiv vs Ghost →
-    </Link>
-
-    <Link
-      href="/kit-vs-substack"
-      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
-    >
-      Kit vs Substack →
-    </Link>
-  </div>
-</section>
 
 
-        {/* SEO-BEEHIIV-SUBSTACK-BREAKEVEN-20260914 */}
         <section className="mt-16 border-t border-gray-200 pt-12">
           <h2 className="text-3xl font-bold">
             Beehiiv vs Substack fees: where is the break-even point?
@@ -498,6 +385,137 @@ export default function BeehiivVsSubstack() {
             can change.
           </p>
         </section>
+
+        <section className="mt-12 border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-bold">
+            How NewsletterFit verifies Beehiiv vs Substack pricing
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            We check the providers&apos; own pricing and help documentation and
+            then model the fee difference at several revenue levels. This page
+            was reviewed in September 2026.
+          </p>
+
+          <p className="mt-4 text-sm leading-6 text-gray-500">
+            Sources:{" "}
+            <a
+              href="https://www.beehiiv.com/pricing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Beehiiv pricing
+            </a>
+            {" · "}
+            <a
+              href="https://support.substack.com/hc/en-us/articles/360037607131-How-much-does-Substack-cost"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4"
+            >
+              Substack fees
+            </a>
+          </p>
+        </section>
+
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold">
+            Who should choose Beehiiv?
+          </h2>
+
+          <p className="mt-5 text-lg leading-8 text-gray-600">
+            Beehiiv generally becomes more interesting when you're treating
+            your newsletter like a business and care heavily about growth,
+            monetization and keeping more of your paid subscription revenue.
+          </p>
+
+          <a
+  href={BEEHIIV_AFFILIATE_URL}
+  target="_blank"
+  rel="sponsored noopener noreferrer"
+  className="mt-6 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
+>
+  Try Beehiiv →
+</a>
+
+<p className="mt-3 text-xs text-gray-500">
+  Affiliate link. NewsletterFit may earn a commission at no extra cost to you.
+</p>
+
+          <h2 className="mt-12 text-3xl font-bold">
+            Who should choose Substack?
+          </h2>
+
+          <p className="mt-5 text-lg leading-8 text-gray-600">
+            Substack can make more sense when you want to start quickly,
+            minimize fixed costs and value its publishing, community and
+            built-in reader ecosystem.
+          </p>
+        </section>
+
+        <section className="mt-16 rounded-3xl bg-gray-50 p-8">
+          <h2 className="text-3xl font-bold">
+            Don't guess. Calculate it.
+          </h2>
+
+          <p className="mt-4 text-lg text-gray-600">
+            NewsletterFit compares your projected costs across Beehiiv,
+            Substack, Kit and Ghost using your actual audience and revenue
+            assumptions.
+          </p>
+
+          <Link
+            href="/#calculator"
+            className="mt-7 inline-block rounded-xl bg-black px-7 py-4 font-semibold text-white brand-swipe"
+          >
+            Use NewsletterFit Free →
+          </Link>
+        </section>
+
+        <section className="mt-16 border-t border-gray-200 pt-8">
+          <p className="text-sm leading-6 text-gray-500">
+            Pricing checked September 2026. Platform features and pricing can
+            change. NewsletterFit is an independent comparison tool and is not
+            affiliated with Beehiiv or Substack.
+          </p>
+
+          <p className="mt-3 text-sm text-gray-500">
+            Sources: official Beehiiv and Substack pricing and comparison
+            documentation.
+          </p>
+        </section>
+
+<section className="mt-14 border-t border-gray-200 pt-10">
+  <h2 className="text-2xl font-bold">Related comparisons</h2>
+
+  <div className="mt-5 flex flex-wrap gap-4">
+    <Link
+      href="/beehiiv-vs-kit"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
+    >
+      Beehiiv vs Kit →
+    </Link>
+
+    <Link
+      href="/beehiiv-vs-ghost"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
+    >
+      Beehiiv vs Ghost →
+    </Link>
+
+    <Link
+      href="/kit-vs-substack"
+      className="rounded-xl border border-gray-200 px-4 py-3 font-semibold brand-swipe"
+    >
+      Kit vs Substack →
+    </Link>
+  </div>
+</section>
+
+
+        {/* SEO-BEEHIIV-SUBSTACK-BREAKEVEN-20260914 */}
+
 
 
       </article>

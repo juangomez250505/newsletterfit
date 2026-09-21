@@ -176,7 +176,7 @@ export default function GetResponseVsMailerLitePage() {
 
           <p className="mt-3 text-sm text-slate-500">
             Pricing shown reflects publicly available annual billing rates
-            reviewed in August 2026. Pricing can change as your list grows.
+            reviewed in September 2026. Pricing can change as your list grows.
           </p>
         </section>
 
@@ -215,23 +215,7 @@ export default function GetResponseVsMailerLitePage() {
               </p>
 
         {/* SEO-INTERNAL-CONVERTKIT-GETRESPONSE-20260914 */}
-        <section className="mt-14 border-t border-slate-200 pt-10">
-          <h2 className="text-2xl font-bold">
-            Also comparing ConvertKit with GetResponse?
-          </h2>
 
-          <p className="mt-4 leading-7 text-slate-700">
-            If Kit is also on your shortlist, read our detailed{" "}
-            <Link
-              href="/getresponse-vs-kit"
-              className="font-semibold text-[#2860B8] underline underline-offset-4"
-            >
-              ConvertKit vs GetResponse
-            </Link>{" "}
-            comparison for pricing, automation, paid newsletters and
-            transaction fees.
-          </p>
-        </section>
 
 
       </article>
@@ -260,7 +244,25 @@ export default function GetResponseVsMailerLitePage() {
         </section>
 
         {/* SEO-MAILERLITE-GETRESPONSE-QUANT-20260914 */}
-        <section className="mt-14">
+        <section className="mt-14 border-t border-slate-200 pt-10">
+          <h2 className="text-2xl font-bold">
+            Also comparing ConvertKit with GetResponse?
+          </h2>
+
+          <p className="mt-4 leading-7 text-slate-700">
+            If Kit is also on your shortlist, read our detailed{" "}
+            <Link
+              href="/getresponse-vs-kit"
+              className="font-semibold text-[#2860B8] underline underline-offset-4"
+            >
+              ConvertKit vs GetResponse
+            </Link>{" "}
+            comparison for pricing, automation, paid newsletters and
+            transaction fees.
+          </p>
+        </section>
+
+          <section className="mt-14">
           <h2 className="text-3xl font-bold">
             MailerLite vs GetResponse pricing at 1,000 subscribers
           </h2>
