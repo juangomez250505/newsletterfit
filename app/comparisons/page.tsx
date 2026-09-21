@@ -691,6 +691,28 @@ export default function ComparisonsPage() {
           </div>
         </section>
 
+
+        {/* SEO-SUBSTACK-ALTERNATIVES-COMPARISONS-20260921 */}
+        <section className="mx-auto max-w-6xl px-6 pb-20">
+          <div className="rounded-2xl border border-gray-200 bg-white p-7">
+            <h2 className="text-2xl font-bold">
+              Not sure Substack is the right fit?
+            </h2>
+
+            <p className="mt-3 leading-7 text-gray-700">
+              See our{" "}
+              <Link
+                href="/substack-alternatives"
+                className="font-semibold text-[#2860B8] underline underline-offset-4"
+              >
+                best Substack alternatives
+              </Link>{" "}
+              for a broader comparison of fees, automation, publishing and
+              paid newsletter options.
+            </p>
+          </div>
+        </section>
+
 </main>
   );
 }

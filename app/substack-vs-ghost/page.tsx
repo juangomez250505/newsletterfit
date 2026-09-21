@@ -275,7 +275,7 @@ export default function SubstackVsGhostPage() {
 </section>
 
       </article>
-    
+
       {/* SEO-ALL-COMPARISONS-LINK */}
       <div className="mx-auto max-w-5xl px-6 pb-12">
         <Link
@@ -285,6 +285,25 @@ export default function SubstackVsGhostPage() {
           View all newsletter platform comparisons →
         </Link>
       </div>
+
+
+        {/* SEO-SUBSTACK-ALTERNATIVES-GHOST-20260921 */}
+        <section className="mx-auto mt-12 max-w-5xl border-t border-gray-200 px-6 pt-8">
+          <h2 className="text-2xl font-bold">
+            Explore more Substack alternatives
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            Compare Ghost with Beehiiv, Kit and other{" "}
+            <Link
+              href="/substack-alternatives"
+              className="font-semibold text-[#2860B8] underline underline-offset-4"
+            >
+              Substack alternatives
+            </Link>{" "}
+            for paid newsletters.
+          </p>
+        </section>
 
 </main>
   );

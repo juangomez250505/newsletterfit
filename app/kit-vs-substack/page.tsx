@@ -485,7 +485,26 @@ export default function KitVsSubstackPage() {
   </div>
 </section>
 
-      </article>
+
+          {/* SEO-SUBSTACK-ALTERNATIVES-KIT-20260921 */}
+          <section className="mt-12 border-t border-gray-200 pt-8">
+            <h2 className="text-2xl font-bold">
+              Comparing other Substack alternatives?
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              Explore our{" "}
+              <Link
+                href="/substack-alternatives"
+                className="font-semibold text-[#2860B8] underline underline-offset-4"
+              >
+                best Substack alternatives
+              </Link>{" "}
+              to compare Kit with Beehiiv, Ghost, MailerLite and GetResponse.
+            </p>
+          </section>
+
+</article>
 
       {/* SEO-ALL-COMPARISONS-LINK */}
       <div className="mx-auto max-w-5xl px-6 pb-12">

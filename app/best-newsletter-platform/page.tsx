@@ -436,6 +436,26 @@ export default function BestNewsletterPlatformPage() {
             </div>
           </section>
 
+
+          {/* SEO-SUBSTACK-ALTERNATIVES-BEST-20260921 */}
+          <section className="mt-12 border-t border-gray-200 pt-8">
+            <h2 className="text-2xl font-bold">
+              Considering Substack?
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              Compare{" "}
+              <Link
+                href="/substack-alternatives"
+                className="font-semibold text-[#2860B8] underline underline-offset-4"
+              >
+                the best Substack alternatives
+              </Link>{" "}
+              if lower paid-newsletter fees, stronger automation or more
+              publishing control matter to you.
+            </p>
+          </section>
+
 </article>
     </main>
   );

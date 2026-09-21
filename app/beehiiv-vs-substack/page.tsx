@@ -518,7 +518,26 @@ export default function BeehiivVsSubstack() {
 
 
 
-      </article>
+
+          {/* SEO-SUBSTACK-ALTERNATIVES-BEEHIIV-20260921 */}
+          <section className="mt-12 border-t border-gray-200 pt-8">
+            <h2 className="text-2xl font-bold">
+              Want to compare more than Beehiiv and Substack?
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              See our guide to{" "}
+              <Link
+                href="/substack-alternatives"
+                className="font-semibold text-[#2860B8] underline underline-offset-4"
+              >
+                Substack alternatives
+              </Link>{" "}
+              including Kit, Ghost, MailerLite and GetResponse.
+            </p>
+          </section>
+
+</article>
 
       {/* SEO-ALL-COMPARISONS-LINK */}
       <div className="mx-auto max-w-5xl px-6 pb-12">
