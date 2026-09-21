@@ -299,7 +299,57 @@ export default function BestNewsletterPlatformForBeginnersPage() {
           </div>
         </section>
 
-        <section className="mt-16 rounded-2xl bg-black p-8 text-white">
+
+          {/* SEO-BEGINNER-COST-TOOLS-20260921 */}
+          <section className="mt-16 border-t border-gray-200 pt-10">
+            <h2 className="text-3xl font-bold">
+              Understand the costs before your newsletter grows
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              A free or inexpensive platform can become much more expensive
+              after you start charging readers. These guides help you compare
+              that before committing to one platform.
+            </p>
+
+            <div className="mt-6 space-y-4">
+              <p>
+                Use the{" "}
+                <Link
+                  href="/substack-fee-calculator"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  Substack Fee Calculator
+                </Link>{" "}
+                to see how Substack&apos;s percentage fee changes with paid
+                revenue.
+              </p>
+
+              <p>
+                Compare{" "}
+                <Link
+                  href="/kit-vs-substack"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  ConvertKit vs Substack
+                </Link>{" "}
+                if you are deciding between simplicity and deeper automation.
+              </p>
+
+              <p>
+                If monetization is part of your plan, read our{" "}
+                <Link
+                  href="/best-platform-for-paid-newsletters"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  best platforms for paid newsletters
+                </Link>
+                .
+              </p>
+            </div>
+          </section>
+
+<section className="mt-16 rounded-2xl bg-black p-8 text-white">
           <h2 className="text-3xl font-bold">
             Still not sure where to start?
           </h2>

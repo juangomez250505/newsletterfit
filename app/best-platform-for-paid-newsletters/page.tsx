@@ -422,7 +422,65 @@ export default function BestPaidNewsletterPlatformsPage() {
           Verify current details directly with each provider before making a
           final decision.
         </p>
-      </article>
+
+          {/* SEO-PAID-COST-TOOLS-20260921 */}
+          <section className="mt-16 rounded-3xl border border-gray-200 bg-gray-50 p-8">
+            <h2 className="text-3xl font-bold">
+              Calculate paid newsletter costs with your own numbers
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              Transaction fees can matter more than monthly plan prices once
+              your paid newsletter starts growing.
+            </p>
+
+            <div className="mt-6 space-y-4">
+              <p>
+                <Link
+                  href="/substack-fee-calculator"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  Calculate your Substack fees
+                </Link>{" "}
+                using your own paid audience and subscription price.
+              </p>
+
+              <p>
+                Compare{" "}
+                <Link
+                  href="/beehiiv-vs-substack"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  Beehiiv vs Substack fees and break-even
+                </Link>
+                .
+              </p>
+
+              <p>
+                Compare{" "}
+                <Link
+                  href="/kit-vs-substack"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  ConvertKit vs Substack
+                </Link>{" "}
+                for transaction fees and automation.
+              </p>
+
+              <p>
+                If you need a broader creator marketing stack, compare{" "}
+                <Link
+                  href="/getresponse-vs-kit"
+                  className="font-semibold text-[#2860B8] underline underline-offset-4"
+                >
+                  ConvertKit vs GetResponse
+                </Link>
+                .
+              </p>
+            </div>
+          </section>
+
+</article>
     </main>
   );
 }

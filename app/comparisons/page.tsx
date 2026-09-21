@@ -633,6 +633,64 @@ export default function ComparisonsPage() {
           </Link>
         </div>
       </section>
-    </main>
+
+        {/* SEO-COMPARISON-TOOLS-20260921 */}
+        <section className="mx-auto max-w-6xl px-6 pb-24">
+          <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 md:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#2860B8]">
+              Cost tools & guides
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold">
+              Go beyond feature comparisons
+            </h2>
+
+            <p className="mt-4 max-w-3xl leading-7 text-gray-700">
+              Use NewsletterFit&apos;s calculators and guides to compare what
+              newsletter platforms may actually cost as your audience grows.
+            </p>
+
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              <Link
+                href="/substack-fee-calculator"
+                className="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <h3 className="font-bold">
+                  Substack Fee Calculator
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  Estimate Substack&apos;s 10% platform fee with your own
+                  paid subscriber numbers.
+                </p>
+              </Link>
+
+              <Link
+                href="/best-platform-for-paid-newsletters"
+                className="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <h3 className="font-bold">
+                  Best platforms for paid newsletters
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  Compare monetization models and paid newsletter economics.
+                </p>
+              </Link>
+
+              <Link
+                href="/best-newsletter-platform-for-beginners"
+                className="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-md"
+              >
+                <h3 className="font-bold">
+                  Best newsletter platforms for beginners
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-gray-600">
+                  Compare beginner-friendly options before your audience grows.
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+</main>
   );
 }

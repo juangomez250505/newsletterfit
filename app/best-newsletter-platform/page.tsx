@@ -392,7 +392,51 @@ export default function BestNewsletterPlatformPage() {
           Verify important details directly with each provider before making a
           final purchase or migration decision.
         </p>
-      </article>
+
+          {/* SEO-COST-GUIDES-20260921 */}
+          <section className="mt-16 rounded-3xl border border-gray-200 bg-gray-50 p-8">
+            <h2 className="text-3xl font-bold">
+              Compare newsletter costs before you choose
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              The cheapest platform can change as your audience and paid
+              revenue grow. These NewsletterFit resources let you compare the
+              real economics instead of relying only on headline prices.
+            </p>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <Link
+                href="/substack-fee-calculator"
+                className="rounded-2xl border border-gray-200 bg-white p-5 font-semibold transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                Substack Fee Calculator →
+              </Link>
+
+              <Link
+                href="/kit-vs-substack"
+                className="rounded-2xl border border-gray-200 bg-white p-5 font-semibold transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                ConvertKit vs Substack fees →
+              </Link>
+
+              <Link
+                href="/best-platform-for-paid-newsletters"
+                className="rounded-2xl border border-gray-200 bg-white p-5 font-semibold transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                Best platforms for paid newsletters →
+              </Link>
+
+              <Link
+                href="/getresponse-vs-kit"
+                className="rounded-2xl border border-gray-200 bg-white p-5 font-semibold transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                ConvertKit vs GetResponse →
+              </Link>
+            </div>
+          </section>
+
+</article>
     </main>
   );
 }
