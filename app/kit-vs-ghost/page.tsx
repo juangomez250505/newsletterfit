@@ -242,7 +242,7 @@ export default function KitVsGhostPage() {
             Pricing and features can change. Always verify current information
             directly with each platform before making a final decision.
           </p>
-        
+
           <a
             href="https://partners.kit.com/8lueyf7s9npm"
             target="_blank"
@@ -285,8 +285,27 @@ export default function KitVsGhostPage() {
   </div>
 </section>
 
-      </article>
-    
+
+        {/* SEO-CONVERTKIT-ALTERNATIVES-KIT-GHOST-20260921 */}
+        <section className="mt-12 border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-bold">
+            Comparing more Kit alternatives?
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            See our
+            <Link
+              href="/convertkit-alternatives"
+              className="font-semibold text-[#2860B8] underline underline-offset-4"
+            >
+              best ConvertKit and Kit alternatives
+            </Link>
+            for Beehiiv, MailerLite, Substack, Ghost and GetResponse.
+          </p>
+        </section>
+
+</article>
+
       {/* SEO-ALL-COMPARISONS-LINK */}
       <div className="mx-auto max-w-5xl px-6 pb-12">
         <Link

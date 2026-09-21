@@ -504,6 +504,25 @@ export default function KitVsSubstackPage() {
             </p>
           </section>
 
+
+        {/* SEO-CONVERTKIT-ALTERNATIVES-KIT-SUBSTACK-20260921 */}
+        <section className="mt-12 border-t border-gray-200 pt-8">
+          <h2 className="text-2xl font-bold">
+            Comparing more Kit alternatives?
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            See our
+            <Link
+              href="/convertkit-alternatives"
+              className="font-semibold text-[#2860B8] underline underline-offset-4"
+            >
+              best ConvertKit and Kit alternatives
+            </Link>
+            for Beehiiv, MailerLite, Substack, Ghost and GetResponse.
+          </p>
+        </section>
+
 </article>
 
       {/* SEO-ALL-COMPARISONS-LINK */}

@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/comparisons",
     "/substack-fee-calculator",
     "/substack-alternatives",
+    "/convertkit-alternatives",
 
     "/beehiiv-vs-substack",
     "/beehiiv-vs-kit",
