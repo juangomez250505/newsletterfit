@@ -390,6 +390,30 @@ export default function BeehiivVsKit() {
           </p>
         </section>
 
+
+        {/* SEO-PRICING-ALTERNATIVES-CLUSTER-20260928 */}
+        <section className="mt-14 border-t border-gray-200 pt-10">
+          <h2 className="text-2xl font-bold">
+            Newsletter pricing & alternatives
+          </h2>
+
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link
+              href="/beehiiv-alternatives"
+              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:border-gray-400"
+            >
+              Beehiiv alternatives →
+            </Link>
+
+            <Link
+              href="/newsletter-platform-pricing"
+              className="rounded-xl border border-gray-200 px-4 py-3 font-semibold hover:border-gray-400"
+            >
+              Newsletter platform pricing →
+            </Link>
+          </div>
+        </section>
+
 </article>
 
       {/* SEO-ALL-COMPARISONS-LINK */}

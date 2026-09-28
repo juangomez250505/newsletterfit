@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ConvertKit vs GetResponse (2026): Pricing, Fees & Automation | NewsletterFit",
+  title: "ConvertKit (Kit) vs GetResponse (2026): Pricing & Features | NewsletterFit",
   description:
     "Compare ConvertKit (now Kit) vs GetResponse for pricing, automation, paid newsletters, creator tools, and monetization. See which platform is better for you.",
   alternates: {
@@ -49,8 +49,8 @@ export default function GetResponseVsKitPage() {
         </div>
 
         <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-            ConvertKit vs GetResponse: Which Is Better in 2026?
-          </h1>
+          ConvertKit (Kit) vs GetResponse: Pricing, Automation & Features
+        </h1>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
             ConvertKit is now called Kit. It is built around creators,

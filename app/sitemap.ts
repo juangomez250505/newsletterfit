@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/substack-alternatives",
     "/convertkit-alternatives",
 
+    "/beehiiv-alternatives",
+    "/newsletter-platform-pricing",
     "/beehiiv-vs-substack",
     "/beehiiv-vs-kit",
     "/beehiiv-vs-ghost",

@@ -55,6 +55,14 @@ verification: {
   },
 };
 
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NewsletterFit",
+  url: "https://getnewsletterfit.com",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -62,6 +70,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body>
+        {/* SEO-ORGANIZATION-SCHEMA-20260928 */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
         <SideMenu />
     <Script id="google-consent-default" strategy="beforeInteractive">
   {`
