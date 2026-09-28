@@ -1205,7 +1205,68 @@ const countrySupported = creatorCountry === "US";
 
 </section>
 
-    </main>
+    
+      {/* SEO-HOME-RESOURCES-20260928 */}
+      <section className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="border-t border-gray-200 pt-12">
+          <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
+            Pricing & alternatives
+          </p>
+
+          <h2 className="mt-3 text-3xl font-bold tracking-tight">
+            Newsletter pricing tools and alternative guides
+          </h2>
+
+          <p className="mt-4 max-w-2xl leading-7 text-gray-600">
+            Compare platform fees, calculate paid newsletter costs and explore
+            alternatives to popular newsletter platforms.
+          </p>
+
+          <div className="mt-7 grid gap-4 sm:grid-cols-2">
+            <a
+              href="/substack-fee-calculator"
+              className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="font-bold">Substack Fee Calculator</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                Estimate Substack fees using your own numbers.
+              </p>
+            </a>
+
+            <a
+              href="/substack-alternatives"
+              className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="font-bold">Substack Alternatives</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                Compare lower-fee and more flexible alternatives.
+              </p>
+            </a>
+
+            <a
+              href="/beehiiv-alternatives"
+              className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="font-bold">Beehiiv Alternatives</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                Compare Beehiiv with Kit, Substack, Ghost and more.
+              </p>
+            </a>
+
+            <a
+              href="/newsletter-platform-pricing"
+              className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="font-bold">Newsletter Platform Pricing</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                Compare plans, fees and newsletter pricing models.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+</main>
 
   );
 }

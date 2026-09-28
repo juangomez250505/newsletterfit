@@ -33,7 +33,7 @@ export default function BeehiivVsKit() {
 
       <article className="mx-auto max-w-4xl px-6 py-16">
         <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-          Platform Comparison · Updated August 2026
+          Platform Comparison · Updated September 2026
         </p>
 
         <div className="platform-comparison-logos mt-6 flex items-center gap-3">
@@ -338,7 +338,7 @@ export default function BeehiivVsKit() {
 
         <section className="mt-16 border-t border-gray-200 pt-8">
           <p className="text-sm leading-6 text-gray-500">
-            Pricing and features checked August 2026. Platform pricing and
+            Pricing and features checked September 2026. Platform pricing and
             features can change. NewsletterFit is an independent comparison
             tool and is not affiliated with Beehiiv or Kit.
           </p>
