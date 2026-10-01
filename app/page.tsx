@@ -476,6 +476,21 @@ const countrySupported = creatorCountry === "US";
 
   return (
     <main className="min-h-screen bg-white text-black">
+
+      {/* SEO-SITE-NAME-SCHEMA-20261001 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "NewsletterFit",
+            alternateName: "Newsletter Fit",
+            url: "https://getnewsletterfit.com/",
+          }),
+        }}
+      />
+
       <section className="border-b border-gray-100 bg-gradient-to-b from-gray-50 to-white">
   <div className="mx-auto max-w-6xl px-6 py-6">
     <div className="flex items-center justify-between">
