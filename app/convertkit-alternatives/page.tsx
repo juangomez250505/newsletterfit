@@ -30,7 +30,7 @@ export default function ConvertKitAlternativesPage() {
 
       <article className="mx-auto max-w-4xl px-6 py-16">
         <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-          Kit alternatives · Updated September 2026
+          Kit alternatives · Updated October 2026
         </p>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">

@@ -1259,6 +1259,16 @@ const countrySupported = creatorCountry === "US";
             </a>
 
             <a
+              href="/convertkit-alternatives"
+              className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="font-bold">ConvertKit Alternatives</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                Compare Kit with Beehiiv, MailerLite, Substack, Ghost and GetResponse.
+              </p>
+            </a>
+
+            <a
               href="/beehiiv-alternatives"
               className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
             >

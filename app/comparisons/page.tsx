@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Newsletter Platform Comparisons (2026) | NewsletterFit",
+  title: "Newsletter Platform Comparison (2026): 6 Tools Compared | NewsletterFit",
   description:
     "Compare Beehiiv, Substack, Kit, Ghost, MailerLite and GetResponse side by side. Explore pricing, fees, automation, monetization and newsletter features.",
   alternates: {
@@ -27,12 +27,16 @@ export default function ComparisonsPage() {
           </p>
 
           <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-6xl">
-            Compare newsletter platforms side by side
+            Newsletter Platform Comparison: Beehiiv, Substack, Kit & More
           </h1>
 
           <p className="mt-5 text-lg leading-8 text-gray-600">
-            Compare pricing, fees, automation, monetization and publishing
-            features across the most popular newsletter platforms.
+            Compare Beehiiv, Substack, Kit, Ghost, MailerLite and GetResponse
+            across pricing, fees, automation, monetization and publishing tools.
+          </p>
+
+          <p className="mt-4 text-sm font-medium text-gray-500">
+            Updated October 2026
           </p>
 
           <Link
@@ -41,6 +45,106 @@ export default function ComparisonsPage() {
           >
             Compare My Platforms →
           </Link>
+        </div>
+      </section>
+
+      {/* SEO-COMPARISON-HUB-20261005 */}
+      <section className="mx-auto max-w-6xl px-6 pb-8">
+        <div className="rounded-3xl border border-gray-200 bg-gray-50 p-6 md:p-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#2860B8]">
+              Quick comparison
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">
+              Which newsletter platform is best for you?
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              The best platform depends on whether you prioritize audience growth,
+              paid subscriptions, automation, publishing control or simplicity.
+            </p>
+          </div>
+
+          <div className="mt-8 overflow-x-auto">
+            <table className="min-w-full border-collapse text-left text-sm">
+              <thead>
+                <tr className="border-b border-gray-300">
+                  <th className="px-4 py-3 font-bold">Platform</th>
+                  <th className="px-4 py-3 font-bold">Best for</th>
+                  <th className="px-4 py-3 font-bold">Pricing model</th>
+                  <th className="px-4 py-3 font-bold">Paid newsletter fees</th>
+                  <th className="px-4 py-3 font-bold">Automation</th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-4 py-4 font-bold">Beehiiv</td>
+                  <td className="px-4 py-4">Newsletter growth</td>
+                  <td className="px-4 py-4">Subscription tiers</td>
+                  <td className="px-4 py-4">No platform revenue cut on paid plans</td>
+                  <td className="px-4 py-4">Strong</td>
+                </tr>
+
+                <tr>
+                  <td className="px-4 py-4 font-bold">Substack</td>
+                  <td className="px-4 py-4">Simple paid newsletters</td>
+                  <td className="px-4 py-4">Free to start</td>
+                  <td className="px-4 py-4">10% platform fee + payment processing</td>
+                  <td className="px-4 py-4">Basic</td>
+                </tr>
+
+                <tr>
+                  <td className="px-4 py-4 font-bold">Kit</td>
+                  <td className="px-4 py-4">Creators and email funnels</td>
+                  <td className="px-4 py-4">Free + subscription tiers</td>
+                  <td className="px-4 py-4">Commerce transaction fee</td>
+                  <td className="px-4 py-4">Very strong</td>
+                </tr>
+
+                <tr>
+                  <td className="px-4 py-4 font-bold">Ghost</td>
+                  <td className="px-4 py-4">Independent publishing</td>
+                  <td className="px-4 py-4">Subscription hosting</td>
+                  <td className="px-4 py-4">No Ghost transaction fee</td>
+                  <td className="px-4 py-4">Moderate</td>
+                </tr>
+
+                <tr>
+                  <td className="px-4 py-4 font-bold">MailerLite</td>
+                  <td className="px-4 py-4">Affordable email marketing</td>
+                  <td className="px-4 py-4">Free + subscriber tiers</td>
+                  <td className="px-4 py-4">No newsletter revenue cut</td>
+                  <td className="px-4 py-4">Strong</td>
+                </tr>
+
+                <tr>
+                  <td className="px-4 py-4 font-bold">GetResponse</td>
+                  <td className="px-4 py-4">Marketing automation</td>
+                  <td className="px-4 py-4">Subscriber and feature tiers</td>
+                  <td className="px-4 py-4">No newsletter revenue cut</td>
+                  <td className="px-4 py-4">Very strong</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-7 flex flex-wrap gap-4">
+            <Link
+              href="/newsletter-platform-pricing"
+              className="font-bold text-[#2860B8] hover:underline"
+            >
+              Compare platform pricing →
+            </Link>
+
+            <Link
+              href="/#calculator"
+              className="font-bold text-[#2860B8] hover:underline"
+            >
+              Calculate my best option →
+            </Link>
+          </div>
         </div>
       </section>
 

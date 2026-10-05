@@ -6,8 +6,8 @@ export const metadata: Metadata = {
   alternates: {
   canonical: "/substack-fee-calculator",
 },
-  title: "Substack Fee Calculator (2026): 10% Fee + Stripe | NewsletterFit",
-  description: "Calculate Substack fees, its 10% platform cut and estimated payment processing. See what you keep at different paid subscriber levels.",
+  title: "Substack Fee Calculator (2026): How Much Does Substack Take? | NewsletterFit",
+  description: "How much does Substack take? Calculate the 10% Substack fee, estimated Stripe fees and what you keep from paid subscriptions.",
 };
 
 export default function SubstackFeeCalculator() {
@@ -30,7 +30,7 @@ export default function SubstackFeeCalculator() {
 
       <section className="mx-auto max-w-5xl px-6 py-16 text-center">
         <p className="text-sm font-bold uppercase tracking-wide text-gray-500">
-          Free Calculator · Updated September 2026
+          Free Calculator · Updated October 2026
         </p>
 
         <h1 className="mx-auto mt-4 max-w-4xl text-5xl font-bold tracking-tight md:text-6xl">
@@ -38,8 +38,9 @@ export default function SubstackFeeCalculator() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-xl leading-8 text-gray-600">
-          Calculate Substack's platform fee and estimated Stripe fees based on
-          your paid subscribers and subscription price.
+          How much does Substack take? Calculate Substack's 10% platform fee,
+          estimated Stripe fees and exactly how much revenue you keep from paid
+          subscriptions.
         </p>
       </section>
 
@@ -303,7 +304,7 @@ export default function SubstackFeeCalculator() {
           </div>
 
           <p className="mt-8 text-sm text-gray-500">
-            Fee information reviewed in September 2026. Platform and
+            Fee information reviewed in October 2026. Platform and
             payment-processing fees can change.
           </p>
         </section>
