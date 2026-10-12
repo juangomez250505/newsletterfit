@@ -105,3 +105,74 @@ body {
   color: white !important;
 }
 
+
+/* NEWSLETTERFIT HOME HERO — 2026-10-12 */
+.nf-hero {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(40, 96, 184, 0.16), transparent 34%),
+    radial-gradient(circle at 82% 28%, rgba(92, 141, 220, 0.13), transparent 30%),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 78%);
+}
+
+.nf-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(40, 96, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 96, 184, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+  pointer-events: none;
+}
+
+.nf-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(10px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.nf-orb-one {
+  width: 340px;
+  height: 340px;
+  top: 80px;
+  left: -120px;
+  background: rgba(40, 96, 184, 0.10);
+  animation: nfFloatOne 12s ease-in-out infinite alternate;
+}
+
+.nf-orb-two {
+  width: 420px;
+  height: 420px;
+  top: 180px;
+  right: -180px;
+  background: rgba(85, 136, 216, 0.09);
+  animation: nfFloatTwo 15s ease-in-out infinite alternate;
+}
+
+@keyframes nfFloatOne {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(50px, 35px, 0);
+  }
+}
+
+@keyframes nfFloatTwo {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-55px, -30px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nf-orb-one,
+  .nf-orb-two {
+    animation: none;
+  }
+}

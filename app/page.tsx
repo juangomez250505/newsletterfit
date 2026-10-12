@@ -491,77 +491,128 @@ const countrySupported = creatorCountry === "US";
         }}
       />
 
-      <section className="border-b border-gray-100 bg-gradient-to-b from-gray-50 to-white">
-  <div className="mx-auto max-w-6xl px-6 py-6">
-    <div className="flex items-center justify-between">
-      <div className="text-xl font-bold tracking-tight">
-        NewsletterFit
-      </div>
+      {/* HOME-HERO-REDESIGN-20261012 */}
+      <section className="nf-hero relative overflow-hidden border-b border-gray-100">
+        <div className="nf-orb nf-orb-one" aria-hidden="true" />
+        <div className="nf-orb nf-orb-two" aria-hidden="true" />
+        <div className="nf-grid" aria-hidden="true" />
 
-      <a
-        href="#calculator"
-        className="rounded-lg bg-black px-4 py-2 text-sm font-semibold text-white transition brand-swipe"
-      >
-        Compare Platforms
-      </a>
-    </div>
-  </div>
+        <div className="relative z-10 mx-auto max-w-6xl px-6 py-5">
+          <div className="flex items-center justify-between">
+            <a href="/" className="text-xl font-bold tracking-tight text-gray-950">
+              NewsletterFit
+            </a>
 
-  <div className="mx-auto max-w-5xl px-6 pb-24 pt-16 text-center">
-    <div className="mx-auto mb-6 inline-flex rounded-full border border-[#D9E5F7] bg-[#F3F7FD] px-4 py-2 text-sm font-medium text-[#2860B8] shadow-sm">
-      Free newsletter platform cost calculator
-    </div>
+            <div className="hidden items-center gap-8 md:flex">
+              <a
+                href="/comparisons"
+                className="text-sm font-semibold text-gray-600 transition hover:text-gray-950"
+              >
+                Comparisons
+              </a>
 
-    <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-gray-950 md:text-7xl">
-      Stop overpaying for your newsletter platform.
-    </h1>
+              <a
+                href="/newsletter-platform-pricing"
+                className="text-sm font-semibold text-gray-600 transition hover:text-gray-950"
+              >
+                Platforms Pricing
+              </a>
+            </div>
 
-    <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600 md:text-xl">
-       Compare Beehiiv, Substack, Kit, Ghost, MailerLite and GetResponse based on your audience,
-      paid subscribers and expected growth.
-    </p>
+            <a
+              href="#calculator"
+              className="rounded-xl bg-gray-950 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5"
+            >
+              Compare Platforms
+            </a>
+          </div>
+        </div>
 
-    <p className="mx-auto mt-3 max-w-2xl text-lg font-medium text-gray-900">
-      See which option could leave you with more money over the next 1–3 years.
-    </p>
+        <div className="relative z-10 mx-auto max-w-5xl px-6 pb-20 pt-16 text-center md:pb-24 md:pt-20">
+          <div className="mx-auto mb-7 inline-flex items-center gap-2 rounded-full border border-[#CFE0F8] bg-white/70 px-4 py-2 text-sm font-semibold text-[#2860B8] shadow-sm backdrop-blur">
+            <span className="h-2 w-2 rounded-full bg-[#2860B8]" />
+            Free newsletter platform cost calculator
+          </div>
 
-    <a
-  href="#calculator"
-  className="group relative mt-10 inline-flex overflow-hidden rounded-xl bg-black px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:-translate-y-0.5 brand-swipe"
->
-  <span className="absolute inset-y-0 left-0 w-0 bg-[#2860B8] transition-all duration-300 ease-out group-hover:w-full" />
-  <span className="relative z-10">
-    Find My Best Platform →
-  </span>
-</a>
+          <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-[-0.04em] text-gray-950 md:text-7xl">
+            Find the newsletter platform that fits your business.
+          </h1>
 
-    <p className="mt-4 text-sm text-gray-500">
-      Free · No signup · Takes less than 60 seconds
-    </p>
+          <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-gray-600 md:text-xl">
+            Compare Beehiiv, Substack, Kit, Ghost, MailerLite and GetResponse
+            using your audience size, paid subscribers, pricing and expected growth.
+          </p>
 
-   <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-6">
-  {[
-    ["Beehiiv", "/logos/beehiiv.png"],
-    ["Substack", "/logos/substack.png"],
-    ["Kit", "/logos/kit.png"],
-    ["Ghost", "/logos/ghost.png"],
-    ["MailerLite", "/logos/mailerlite.png"],
-    ["GetResponse", "/logos/getresponse.png"],
-  ].map(([name, logo]) => (
-    <div
-      key={name}
-      className="flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-4 font-semibold text-gray-700 shadow-sm"
-    >
-      <img
-        src={logo}
-        alt=""
-        className="h-5 w-5 rounded-sm object-contain"
-      />
-      <span>{name}</span>
-    </div>
-  ))}
-</div>
-  </div>
+          <p className="mx-auto mt-3 max-w-2xl font-medium text-gray-900">
+            See which platform could cost less today — and as your newsletter grows.
+          </p>
+
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="#calculator"
+              className="inline-flex min-w-[220px] items-center justify-center rounded-xl bg-gray-950 px-7 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
+            >
+              Find My Best Platform →
+            </a>
+
+            <a
+              href="/comparisons"
+              className="inline-flex min-w-[220px] items-center justify-center rounded-xl border border-gray-300 bg-white/75 px-7 py-4 font-semibold text-gray-900 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:bg-white"
+            >
+              Browse Comparisons
+            </a>
+          </div>
+
+          <p className="mt-5 text-sm text-gray-500">
+            Free · No signup · Takes less than 60 seconds
+          </p>
+
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-4">
+            {[
+              ["No signup", "Use the calculator instantly"],
+              ["Independent", "No platform pays to rank higher"],
+              ["Real pricing", "Fees and plans reviewed regularly"],
+              ["6 platforms", "Compared in one place"],
+            ].map(([title, copy]) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-white/70 bg-white/65 p-4 text-left shadow-sm backdrop-blur"
+              >
+                <p className="font-bold text-gray-950">{title}</p>
+                <p className="mt-1 text-sm leading-5 text-gray-600">{copy}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-gray-500">
+              Popular newsletter platforms
+            </p>
+
+            <div className="mx-auto mt-5 grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
+              {[
+                ["Beehiiv", "/logos/beehiiv.png"],
+                ["Substack", "/logos/substack.png"],
+                ["Kit", "/logos/kit.png"],
+                ["Ghost", "/logos/ghost.png"],
+                ["MailerLite", "/logos/mailerlite.png"],
+                ["GetResponse", "/logos/getresponse.png"],
+              ].map(([name, logo]) => (
+                <div
+                  key={name}
+                  className="flex items-center justify-center gap-2 rounded-xl border border-white/80 bg-white/75 px-4 py-4 font-semibold text-gray-700 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:bg-white"
+                >
+                  <img
+                    src={logo}
+                    alt=""
+                    className="h-5 w-5 rounded-sm object-contain"
+                  />
+                  <span>{name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
 <section className="bg-white">
