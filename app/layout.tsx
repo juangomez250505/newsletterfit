@@ -1,3 +1,4 @@
+import AffiliateClickTracking from "./components/AffiliateClickTracking";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body>
+        <AffiliateClickTracking />
         {/* SEO-ORGANIZATION-SCHEMA-20260928 */}
         <script
           type="application/ld+json"

@@ -82,11 +82,11 @@ export default function NewsletterPlatformPricingPage() {
                 <tr>
                   <td className="px-5 py-4 font-semibold">Beehiiv</td>
                   <td className="px-5 py-4">
-                    Scale shown from about $43/month billed annually at the displayed tier
+                    Lite from $49/month at 1,000 subscribers, billed annually
                   </td>
                   <td className="px-5 py-4">2,500 subscribers</td>
                   <td className="px-5 py-4">
-                    0% Beehiiv take rate on paid subscriptions on Scale
+                    0% Beehiiv take rate on paid subscriptions on Lite/Pro
                   </td>
                 </tr>
 
@@ -158,7 +158,7 @@ export default function NewsletterPlatformPricingPage() {
 
           <p className="mt-4 text-sm leading-6 text-gray-500">
             Prices vary by subscriber count, plan, region and billing cycle.
-            Figures are reference prices reviewed in September 2026 rather
+            Beehiiv plan names and pricing updated October 2026; other figures are reference prices reviewed September 2026 rather
             than a guarantee of your exact bill.
           </p>
         </section>
@@ -223,13 +223,13 @@ export default function NewsletterPlatformPricingPage() {
               <tbody className="divide-y divide-gray-200">
                 <tr>
                   <td className="px-5 py-4 font-semibold">
-                    Beehiiv Scale
+                    Beehiiv Lite
                   </td>
                   <td className="px-5 py-4">
-                    About $43/month on annual billing at the displayed tier
+                    About $49/month, billed annually, at 1,000 subscribers
                   </td>
                   <td className="px-5 py-4">
-                    About $430/month in paid revenue
+                    About $490/month in paid revenue
                   </td>
                 </tr>
 
@@ -249,7 +249,7 @@ export default function NewsletterPlatformPricingPage() {
           </div>
 
           <p className="mt-4 text-sm leading-6 text-gray-500">
-            Example: 10% of $430 is $43 and 10% of $290 is $29. Payment
+            Example: 10% of $490 is $49 and 10% of $290 is $29. Payment
             processing still applies and Beehiiv/Ghost pricing changes at
             higher audience tiers.
           </p>
@@ -261,10 +261,12 @@ export default function NewsletterPlatformPricingPage() {
           </h2>
 
           <p className="mt-5 leading-7 text-gray-700">
-            Beehiiv currently offers a free Launch plan for up to 2,500
-            subscribers with unlimited email sends. Scale adds monetization,
-            automations, advanced analytics and a 0% Beehiiv take rate on paid
-            subscriptions.
+            Beehiiv Free supports up to 2,500 subscribers with unlimited email
+            sends. Lite starts at $49/month with annual billing at the
+            1,000-subscriber tier ($59 month to month) and adds paid
+            subscriptions, monetization and automations, with 0% Beehiiv
+            take rate on paid subscription revenue. Prices increase with
+            subscriber count under the October 2026 plans.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-3">

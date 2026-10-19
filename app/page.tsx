@@ -50,15 +50,18 @@ export default function Home() {
     useState<PlatformName>("Substack");
   const [showResults, setShowResults] = useState(false);
 
-  function beehiivScalePrice(subs: number) {
-    if (subs <= 1000) return 43;
-    if (subs <= 2500) return 61;
-    if (subs <= 5000) return 78;
-    if (subs <= 10000) return 96;
-    if (subs <= 25000) return 149;
-    if (subs <= 50000) return 219;
-    if (subs <= 75000) return 254;
-    if (subs <= 100000) return 290;
+  // Beehiiv Lite, USD per month with annual billing, Oct 2026.
+  // Rates are subscriber-tier prices (not month-to-month billing rates).
+  // Sources: beehiiv.com/pricing and beehiiv.com/blog/beehiiv-pricing-2026
+  function beehiivLitePrice(subs: number) {
+    if (subs <= 1000) return 49;
+    if (subs <= 2500) return 69;
+    if (subs <= 5000) return 95;
+    if (subs <= 10000) return 119;
+    if (subs <= 25000) return 169;
+    if (subs <= 50000) return 249;
+    if (subs <= 75000) return 329;
+    if (subs <= 100000) return 399;
 
     return null;
   }
@@ -145,17 +148,17 @@ function getResponseCreatorPrice(subs: number) {
     const revenue = paid * price;
 
     if (platform === "Beehiiv") {
-      // Free Launch can be used if there are no paid subscriptions
+      // Beehiiv Free applies to newsletters without paid subscriptions
       // and the audience is 2,500 or fewer.
-      if (paid === 0 && subs <= 2500) {
+      if (paid === 0 && subs <= 2500 && !needsAdvancedAutomations) {
         return 0;
       }
 
-      const plan = beehiivScalePrice(subs);
+      const plan = beehiivLitePrice(subs);
 
       if (plan === null) return null;
 
-      // Scale plan + standard Stripe processing
+      // Lite plan (annual billing equivalent) + estimated US Stripe processing
       return plan + revenue * 0.029 + paid * 0.3;
     }
 
@@ -334,7 +337,7 @@ if (platform === "MailerLite") {
         name: "Beehiiv",
         cost: totals.Beehiiv,
         supported: supported.Beehiiv,
-        note: "Scale plan when required + Stripe. 0% platform take rate.",
+        note: "Free or Lite (October 2026 annual-billing rates) + estimated US Stripe fees; 0% platform take rate.",
       },
       {
         name: "Substack",
@@ -390,6 +393,8 @@ if (platform === "MailerLite") {
       "Substack",
       "Kit",
       "Ghost",
+      "MailerLite",
+      "GetResponse",
     ];
 
     for (let month = 0; month <= 36; month++) {
@@ -839,7 +844,18 @@ const countrySupported = creatorCountry === "US";
 
           <button
            disabled={invalid || !countrySupported}
-            onClick={() => setShowResults(true)}
+            onClick={() => {
+              setShowResults(true);
+              const gtag = (window as Window & {
+                gtag?: (...args: unknown[]) => void;
+              }).gtag;
+              gtag?.("event", "calculator_completed", {
+                page_path: "/",
+                recommended_platform: winner?.name ?? "unavailable",
+                current_platform: currentPlatform,
+                projection_years: years,
+              });
+            }}
             className="mt-8 w-full rounded-xl bg-black px-6 py-4 text-lg font-semibold text-white transition disabled:opacity-40 brand-swipe"
           >
             Compare My Platforms

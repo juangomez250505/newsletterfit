@@ -112,7 +112,7 @@ export default function SubstackAlternativesPage() {
                 <tr>
                   <td className="px-5 py-4 font-semibold">Beehiiv</td>
                   <td className="px-5 py-4">
-                    Free Launch plan; paid plans for advanced features
+                    Free plan; Lite and Pro for paid features
                   </td>
                   <td className="px-5 py-4">
                     0% platform take on paid subscriptions
@@ -195,10 +195,10 @@ export default function SubstackAlternativesPage() {
           </p>
 
           <p className="mt-5 leading-7 text-gray-700">
-            Its Launch plan is currently free for up to 2,500 subscribers.
-            Beehiiv&apos;s Scale plan includes paid subscriptions with a 0%
-            platform take rate, although normal payment-processing fees still
-            apply.
+            Its Free plan supports up to 2,500 subscribers. Beehiiv&apos;s
+            Lite plan supports paid subscriptions with a 0% platform take rate,
+            although normal payment-processing fees still apply. Lite starts at
+            $49/month on annual billing at 1,000 subscribers (October 2026).
           </p>
 
           <p className="mt-5 leading-7 text-gray-700">
@@ -358,11 +358,11 @@ export default function SubstackAlternativesPage() {
             </h3>
 
             <p className="mt-3 leading-7 text-gray-700">
-              Beehiiv Scale currently costs about $43 per month when billed
-              annually at the smallest tier. Comparing only Beehiiv&apos;s plan
-              cost with Substack&apos;s 10% platform fee gives a simplified
-              break-even of roughly <strong>$430 per month</strong> in paid
-              subscription revenue.
+              Beehiiv Lite currently costs about $49 per month when billed
+              annually at the 1,000-subscriber tier. Comparing only the
+              Beehiiv plan cost with Substack&apos;s 10% platform fee gives a
+              simplified break-even of roughly <strong>$490 per month</strong>
+              in paid subscription revenue.
             </p>
           </div>
 

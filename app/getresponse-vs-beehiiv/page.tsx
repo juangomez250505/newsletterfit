@@ -60,7 +60,7 @@ export default function GetResponseVsBeehiivPage() {
           </p>
 
           <p className="mt-4 text-sm text-slate-500">
-            Last reviewed: August 2026
+            Beehiiv pricing updated: October 2026; GetResponse reviewed: August 2026
           </p>
         </div>
 
@@ -69,8 +69,8 @@ export default function GetResponseVsBeehiivPage() {
 
           <p className="mt-4 leading-7 text-slate-700">
             <strong>Choose Beehiiv</strong> if your main goal is building,
-            growing, and monetizing a newsletter. Its free Launch plan supports
-            up to 2,500 subscribers, while Scale adds paid subscriptions,
+            growing, and monetizing a newsletter. Its Free plan supports
+            up to 2,500 subscribers, while Lite adds paid subscriptions,
             automations, the Ad Network, recommendations, and other
             newsletter-focused growth tools.
           </p>
@@ -108,7 +108,7 @@ export default function GetResponseVsBeehiivPage() {
 
                 <tr>
                   <td className="px-5 py-4">Paid newsletters</td>
-                  <td className="px-5 py-4">Yes, on Scale and above</td>
+                  <td className="px-5 py-4">Yes, on Lite and above</td>
                   <td className="px-5 py-4">Yes, on Creator</td>
                 </tr>
 
@@ -155,7 +155,7 @@ export default function GetResponseVsBeehiivPage() {
 
           <p className="mt-3 text-sm text-slate-500">
             Pricing shown is based on publicly available annual billing rates
-            reviewed in August 2026. Prices can change as your audience grows.
+            reviewed in August 2026 for GetResponse and October 2026 for Beehiiv. Prices can change as your audience grows.
           </p>
         </section>
 
@@ -167,15 +167,15 @@ export default function GetResponseVsBeehiivPage() {
               <h3 className="text-xl font-bold">Beehiiv pricing</h3>
 
               <p className="mt-4 leading-7 text-slate-700">
-                Beehiiv&apos;s Launch plan costs $0 and supports up to 2,500
+                Beehiiv&apos;s Free plan costs $0 and supports up to 2,500
                 subscribers. It includes unlimited email sends and core
                 newsletter tools.
               </p>
 
               <p className="mt-4 leading-7 text-slate-700">
-                Scale starts at about $43 per month when billed annually at the
-                smallest paid tier. Pricing increases as the subscriber count
-                grows.
+                Lite starts at $49 per month when billed annually at the
+                1,000-subscriber tier, or $59 month to month. Pricing increases
+                as the subscriber count grows.
               </p>
             </article>
 
@@ -208,7 +208,7 @@ export default function GetResponseVsBeehiivPage() {
 
           <p className="mt-5 leading-7 text-slate-700">
             Beehiiv has the stronger value proposition for a newsletter-first
-            creator starting from zero because its Launch plan supports up to
+            creator starting from zero because its Free plan supports up to
             2,500 subscribers at no monthly platform cost.
           </p>
 

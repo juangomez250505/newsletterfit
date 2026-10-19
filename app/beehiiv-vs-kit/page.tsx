@@ -193,7 +193,7 @@ export default function BeehiivVsKit() {
           </p>
 
           <p className="mt-5 text-lg leading-8 text-gray-600">
-            Beehiiv's Launch plan supports up to 2,500 subscribers and is aimed
+            Beehiiv's Free plan supports up to 2,500 subscribers and is aimed
             at creators starting a newsletter before moving into its more
             advanced growth and monetization tools.
           </p>

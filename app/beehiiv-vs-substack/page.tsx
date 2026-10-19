@@ -246,10 +246,10 @@ export default function BeehiivVsSubstack() {
           </p>
 
           <p className="mt-5 leading-7 text-gray-700">
-            For a newsletter with up to 1,000 subscribers, Beehiiv Scale
-            currently starts at $49 per month with monthly billing. That means
-            Substack&apos;s 10% platform fee reaches the same $49 at about
-            <strong>$490 in monthly paid subscription revenue</strong>.
+            For a newsletter with up to 1,000 subscribers, Beehiiv Lite
+            currently starts at $59 per month with monthly billing at the
+            1,000-subscriber tier. Substack&apos;s 10% platform fee reaches
+            $59 at about <strong>$590 in monthly paid subscription revenue</strong>.
           </p>
 
           <div className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-7">
@@ -258,12 +258,12 @@ export default function BeehiivVsSubstack() {
             </p>
 
             <p className="mt-3 text-3xl font-bold">
-              ~$490/month in paid revenue
+              ~$590/month in paid revenue
             </p>
 
             <p className="mt-3 leading-7 text-gray-700">
-              At that level, Substack&apos;s 10% platform fee is about $49,
-              equal to the monthly Beehiiv Scale price for the 1,000-subscriber
+              At that level, Substack&apos;s 10% platform fee is about $59,
+              equal to the monthly Beehiiv Lite price for the 1,000-subscriber
               tier. Above that revenue level, Substack&apos;s percentage fee
               grows while Beehiiv&apos;s platform price remains fixed until you
               move into a higher subscriber tier.
@@ -271,9 +271,9 @@ export default function BeehiivVsSubstack() {
           </div>
 
           <p className="mt-5 leading-7 text-gray-700">
-            With annual Beehiiv billing, the effective Scale price at this tier
-            is roughly $43 per month, which puts the simplified fee-only
-            break-even closer to <strong>$430 in monthly paid revenue</strong>.
+            With annual Beehiiv billing, the effective Lite price at this tier
+            is $49 per month, which puts the simplified fee-only
+            break-even near <strong>$490 in monthly paid revenue</strong>.
           </p>
 
           <h3 className="mt-10 text-2xl font-bold">
@@ -291,7 +291,7 @@ export default function BeehiivVsSubstack() {
                     Substack 10% platform fee
                   </th>
                   <th className="px-5 py-4 font-semibold">
-                    Beehiiv Scale at 1K subscribers
+                    Beehiiv Lite at 1K subscribers
                   </th>
                   <th className="px-5 py-4 font-semibold">
                     Lower platform cost
@@ -303,41 +303,41 @@ export default function BeehiivVsSubstack() {
                 <tr>
                   <td className="px-5 py-4">$250</td>
                   <td className="px-5 py-4">$25</td>
-                  <td className="px-5 py-4">$49/month</td>
+                  <td className="px-5 py-4">$59/month</td>
                   <td className="px-5 py-4">Substack</td>
                 </tr>
 
                 <tr>
                   <td className="px-5 py-4">$500</td>
                   <td className="px-5 py-4">$50</td>
-                  <td className="px-5 py-4">$49/month</td>
-                  <td className="px-5 py-4">Beehiiv by ~$1</td>
+                  <td className="px-5 py-4">$59/month</td>
+                  <td className="px-5 py-4">Substack by ~$9</td>
                 </tr>
 
                 <tr>
                   <td className="px-5 py-4">$1,000</td>
                   <td className="px-5 py-4">$100</td>
-                  <td className="px-5 py-4">$49/month</td>
+                  <td className="px-5 py-4">$59/month</td>
                   <td className="px-5 py-4">
-                    <strong>Beehiiv by ~$51</strong>
+                    <strong>Beehiiv by ~$41</strong>
                   </td>
                 </tr>
 
                 <tr>
                   <td className="px-5 py-4">$2,000</td>
                   <td className="px-5 py-4">$200</td>
-                  <td className="px-5 py-4">$49/month</td>
+                  <td className="px-5 py-4">$59/month</td>
                   <td className="px-5 py-4">
-                    <strong>Beehiiv by ~$151</strong>
+                    <strong>Beehiiv by ~$141</strong>
                   </td>
                 </tr>
 
                 <tr>
                   <td className="px-5 py-4">$5,000</td>
                   <td className="px-5 py-4">$500</td>
-                  <td className="px-5 py-4">$49/month</td>
+                  <td className="px-5 py-4">$59/month</td>
                   <td className="px-5 py-4">
-                    <strong>Beehiiv by ~$451</strong>
+                    <strong>Beehiiv by ~$441</strong>
                   </td>
                 </tr>
               </tbody>
@@ -346,7 +346,7 @@ export default function BeehiivVsSubstack() {
 
           <p className="mt-4 text-sm leading-6 text-gray-500">
             This is a simplified platform-cost comparison for Beehiiv&apos;s
-            1,000-subscriber Scale tier. Beehiiv pricing increases at higher
+            1,000-subscriber Lite tier using monthly billing. Beehiiv pricing increases at higher
             subscriber tiers. Payment-processing fees are not included in this
             break-even calculation.
           </p>

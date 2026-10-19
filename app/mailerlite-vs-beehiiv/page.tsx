@@ -149,6 +149,57 @@ export default function MailerLiteVsBeehiivPage() {
           </div>
         </section>
 
+        <section className="mt-14" id="pricing">
+          <h2 className="text-3xl font-bold">
+            MailerLite vs Beehiiv pricing at 1,000, 2,500 and 5,000 subscribers
+          </h2>
+          <p className="mt-5 leading-7 text-gray-700">
+            As of October 2026, Beehiiv Free supports up to 2,500 subscribers;
+            MailerLite Free supports up to 250 subscribers and 2,500 emails
+            per month. Above the free limits, your costs depend on audience
+            size and selected features.
+          </p>
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-gray-200">
+            <table className="w-full min-w-[650px] text-left">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-5 py-4 font-semibold">Subscribers</th>
+                  <th className="px-5 py-4 font-semibold">MailerLite Comfort</th>
+                  <th className="px-5 py-4 font-semibold">Beehiiv Lite</th>
+                  <th className="px-5 py-4 font-semibold">Beehiiv Free</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-5 py-4">1,000</td>
+                  <td className="px-5 py-4">$17.10/mo</td>
+                  <td className="px-5 py-4">$49/mo</td>
+                  <td className="px-5 py-4">$0</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-4">2,500</td>
+                  <td className="px-5 py-4">$29.70/mo</td>
+                  <td className="px-5 py-4">$69/mo</td>
+                  <td className="px-5 py-4">$0</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-4">5,000</td>
+                  <td className="px-5 py-4">$44.10/mo</td>
+                  <td className="px-5 py-4">$95/mo</td>
+                  <td className="px-5 py-4">Not available</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-gray-500">
+            USD per month with annual billing; annual contracts are billed
+            upfront. Beehiiv Lite is the paid plan for monetized newsletters.
+            Prices exclude payment processing and may vary by tier or country.
+            Sources: <a href="https://www.beehiiv.com/pricing" className="underline">Beehiiv</a>
+            {" · "}<a href="https://www.mailerlite.com/pricing" className="underline">MailerLite</a>.
+          </p>
+        </section>
+
         <section className="mt-14">
           <h2 className="text-3xl font-bold">
             The main difference: marketing vs newsletter growth
