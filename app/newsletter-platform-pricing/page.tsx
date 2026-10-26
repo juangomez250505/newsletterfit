@@ -48,7 +48,7 @@ export default function NewsletterPlatformPricingPage() {
         </Link>
 
         <p className="mt-10 text-sm font-bold uppercase tracking-wide text-gray-500">
-          Pricing guide · Updated September 2026
+          Pricing guide · Updated October 2026
         </p>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
@@ -61,6 +61,47 @@ export default function NewsletterPlatformPricingPage() {
           scale with audience size, and others take a percentage of paid
           newsletter revenue.
         </p>
+
+        {/* SEO-PREMIUM-FEES-20261026 */}
+        <section className="mt-12 rounded-2xl border border-blue-200 bg-blue-50/40 p-6 sm:p-8">
+          <h2 className="text-2xl font-bold sm:text-3xl">
+            What are the fees for premium newsletters?
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            Newsletter creators set the subscription price their readers pay.
+            The creator&apos;s cost depends on platform fees, software plans
+            and payment processing. Here are typical fees for a paid newsletter:
+          </p>
+
+          <ul className="mt-4 list-disc space-y-2 pl-5 leading-7 text-gray-700">
+            <li><strong>Substack:</strong> 10% of paid subscription revenue, plus Stripe processing and recurring billing fees.</li>
+            <li><strong>Beehiiv:</strong> 0% platform take rate on paid subscriptions; Lite starts at $49/month billed annually at 1,000 subscribers, plus processing.</li>
+            <li><strong>Ghost:</strong> 0% platform transaction fees; Publisher starts at $29/month billed annually at 1,000 members, plus processing.</li>
+            <li><strong>Kit:</strong> 0.6% platform fee on paid newsletters plus card processing (typically 2.9% + $0.30 per transaction for US cards).</li>
+          </ul>
+
+          <p className="mt-4 leading-7 text-gray-700">
+            <strong>Example:</strong> On $1,000 of monthly paid newsletter
+            revenue, Substack&apos;s platform fee alone is $100, before Stripe.
+            Beehiiv and Ghost instead charge subscription fees for their
+            eligible paid plans. These figures are not full payout estimates.
+          </p>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            USD reference fees, reviewed October 2026. Actual costs vary by
+            country, subscriber count, payment method and billing cycle.
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold">
+            <Link href="/substack-fee-calculator" className="text-[#2860B8] underline">
+              Calculate Substack fees →
+            </Link>
+            <Link href="/#calculator" className="text-[#2860B8] underline">
+              Compare costs for your newsletter →
+            </Link>
+          </div>
+        </section>
 
         <section className="mt-12">
           <h2 className="text-3xl font-bold">
