@@ -103,6 +103,14 @@ export default function NewsletterPlatformPricingPage() {
           </div>
         </section>
 
+        {/* SEO-BEEHIIV-PRICING-LINK-20261026 */}
+        <p className="mt-6 text-sm leading-6 text-gray-700">
+          Need subscriber-tier prices for Beehiiv Free, Lite and Pro?{" "}
+          <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline">
+            See the updated Beehiiv pricing guide and cost calculator →
+          </Link>
+        </p>
+
         <section className="mt-12">
           <h2 className="text-3xl font-bold">
             Newsletter platform pricing at a glance

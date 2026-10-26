@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     "/beehiiv-alternatives",
     "/newsletter-platform-pricing",
+    "/beehiiv-pricing",
     "/beehiiv-vs-substack",
     "/beehiiv-vs-kit",
     "/beehiiv-vs-ghost",

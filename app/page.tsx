@@ -1345,6 +1345,17 @@ const countrySupported = creatorCountry === "US";
               </p>
             </a>
 
+            {/* SEO-BEEHIIV-PRICING-LINK-20261026 */}
+            <a
+              href="/beehiiv-pricing"
+              className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="font-bold">Beehiiv Pricing 2026</h3>
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                Compare Free, Lite and Pro prices and calculate paid newsletter costs.
+              </p>
+            </a>
+
             <a
               href="/newsletter-platform-pricing"
               className="rounded-2xl border border-gray-200 p-5 transition hover:-translate-y-1 hover:shadow-md"

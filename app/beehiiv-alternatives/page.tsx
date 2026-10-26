@@ -323,6 +323,18 @@ export default function BeehiivAlternativesPage() {
           </Link>
         </section>
 
+        {/* SEO-BEEHIIV-PRICING-LINK-20261026 */}
+        <section className="mt-10 rounded-2xl border border-blue-200 bg-blue-50/50 p-6">
+          <h2 className="text-xl font-bold">Check Beehiiv's new 2026 prices</h2>
+          <p className="mt-2 leading-7 text-slate-700">
+            Before switching, compare Beehiiv Free, Lite and Pro by subscriber count and
+            see when a fixed plan can cost less than Substack's 10% platform fee.
+          </p>
+          <Link href="/beehiiv-pricing" className="mt-3 inline-block font-semibold text-[#2860B8] underline">
+            View Beehiiv pricing and calculator →
+          </Link>
+        </section>
+
         <section className="mt-16 rounded-3xl bg-black p-8 text-white">
           <h2 className="text-3xl font-bold">
             Compare costs using your own newsletter
