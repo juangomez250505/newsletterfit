@@ -259,6 +259,14 @@ export default function ConvertKitAlternativesPage() {
             on paid subscriptions.
           </p>
 
+          <p className="mt-4 leading-7 text-gray-700">
+            Compare{" "}
+            <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline underline-offset-4">
+              Beehiiv pricing by subscriber tier
+            </Link>{" "}
+            before deciding whether to switch from Kit.
+          </p>
+
           <p className="mt-5 leading-7 text-gray-700">
             Compare{" "}
             <Link

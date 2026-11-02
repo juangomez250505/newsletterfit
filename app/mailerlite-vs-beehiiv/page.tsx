@@ -198,6 +198,12 @@ export default function MailerLiteVsBeehiivPage() {
             Sources: <a href="https://www.beehiiv.com/pricing" className="underline">Beehiiv</a>
             {" · "}<a href="https://www.mailerlite.com/pricing" className="underline">MailerLite</a>.
           </p>
+          <p className="mt-4 leading-7 text-gray-700">
+            For larger audiences or different billing cycles, see the{" "}
+            <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline underline-offset-4">
+              full Beehiiv Lite and Pro pricing guide
+            </Link>.
+          </p>
         </section>
 
         <section className="mt-14">

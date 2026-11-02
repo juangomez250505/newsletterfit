@@ -179,6 +179,14 @@ export default function BestNewsletterPlatformPage() {
             plans unlock more advanced growth and monetization features.
           </p>
 
+          <p className="mt-4 leading-7 text-gray-700">
+            Before choosing, check{" "}
+            <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline underline-offset-4">
+              Beehiiv pricing by subscriber count
+            </Link>{" "}
+            to compare the Free, Lite and Pro plans.
+          </p>
+
           <div className="mt-6 rounded-2xl border border-gray-200 p-6">
             <p>
               <strong>Best for:</strong> creators who want the newsletter itself
