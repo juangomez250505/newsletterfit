@@ -6,9 +6,9 @@ const BEEHIIV_AFFILIATE_URL =
 
 export const metadata: Metadata = {
   title:
-    "MailerLite vs Beehiiv (2026): Pricing, Features & Best Choice | NewsletterFit",
+    "MailerLite vs Beehiiv (2026): Free Plans, Pricing & Fees | NewsletterFit",
   description:
-    "Compare MailerLite vs Beehiiv for newsletters, email automation, growth, monetization and pricing.",
+    "Compare MailerLite vs Beehiiv pricing at 1,000, 2,500 and 5,000 subscribers, free limits, automation and monetization features.",
   alternates: {
     canonical: "/mailerlite-vs-beehiiv",
   },
@@ -60,7 +60,7 @@ export default function MailerLiteVsBeehiivPage() {
         </div>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-          MailerLite vs Beehiiv: Which newsletter platform is better?
+          MailerLite vs Beehiiv: Pricing, Free Plans and Features (2026)
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -203,6 +203,31 @@ export default function MailerLiteVsBeehiivPage() {
             <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline underline-offset-4">
               full Beehiiv Lite and Pro pricing guide
             </Link>.
+          </p>
+        </section>
+
+        {/* newsletterfit-seo-2026-11-09:mailerlite-beehiiv */}
+        <section className="mt-14 rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+          <h2 className="text-2xl font-bold">Which free plan wins at 1,000 or 2,500 subscribers?</h2>
+          <p className="mt-4 leading-7 text-gray-700">
+            At 1,000 subscribers, Beehiiv Free is still available for publishing;
+            MailerLite Free is not, because its limit is 250 active subscribers.
+            At 2,500 subscribers, Beehiiv Free remains within its audience cap,
+            but MailerLite requires a paid tier.
+          </p>
+          <p className="mt-4 leading-7 text-gray-700">
+            Free does not mean identical features. Beehiiv requires Lite or
+            higher for paid newsletter subscriptions and custom automations.
+            MailerLite provides email-marketing automations on Free, subject to
+            its stricter audience, send and automation limits. If you plan to
+            monetize subscriptions, compare the eligible paid plans instead
+            of choosing solely from the free subscriber limits.
+          </p>
+          <p className="mt-4 text-sm text-gray-600">
+            Verified against the official {" "}
+            <a href="https://www.beehiiv.com/pricing" target="_blank" rel="noopener noreferrer" className="underline">Beehiiv</a> and {" "}
+            <a href="https://www.mailerlite.com/pricing" target="_blank" rel="noopener noreferrer" className="underline">MailerLite</a> pricing pages, November 2026.
+            {" "}<Link href="/newsletter-platform-pricing" className="underline">See the full fees comparison</Link>.
           </p>
         </section>
 

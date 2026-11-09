@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Newsletter Platform Pricing Compared (2026): Fees & Costs | NewsletterFit",
   description:
-    "Compare newsletter platform pricing and fees for Beehiiv, Substack, Kit, Ghost, MailerLite and GetResponse in 2026.",
+    "Newsletter platform pricing in 2026: compare free-plan limits, monthly fees and paid subscription costs for Beehiiv, Substack, Kit, Ghost and more.",
   alternates: {
     canonical: "/newsletter-platform-pricing",
   },
@@ -209,6 +209,34 @@ export default function NewsletterPlatformPricingPage() {
             Prices vary by subscriber count, plan, region and billing cycle.
             Beehiiv plan names and pricing updated October 2026; other figures are reference prices reviewed September 2026 rather
             than a guarantee of your exact bill.
+          </p>
+        </section>
+
+        {/* newsletterfit-seo-2026-11-09:pricing */}
+        <section className="mt-16 rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+          <h2 className="text-2xl font-bold">Which newsletter platform is cheapest at 1,000 subscribers?</h2>
+          <p className="mt-4 leading-7 text-gray-700">
+            There is no single cheapest platform for every use case, because
+            free publishing and paid newsletter monetization have different
+            costs. At 1,000 subscribers, these are the practical starting points:
+          </p>
+          <ul className="mt-4 list-disc space-y-3 pl-6 leading-7 text-gray-700">
+            <li><strong>ConvertKit (now Kit):</strong> a $0 plan is available up to 10,000 subscribers; advanced automations require a paid plan.</li>
+            <li><strong>Beehiiv:</strong> Free supports up to 2,500 subscribers; paid subscriptions and advanced monetization need Lite or higher.</li>
+            <li><strong>Substack:</strong> publishing has no standard software subscription, but a paid newsletter incurs a 10% platform fee before processing.</li>
+            <li><strong>MailerLite:</strong> its free plan stops at 250 active subscribers, so a 1,000-person list needs a paid tier.</li>
+            <li><strong>GetResponse:</strong> its free plan supports up to 500 contacts, so a 1,000-person list also needs a paid tier.</li>
+          </ul>
+          <p className="mt-4 leading-7 text-gray-700">
+            If you plan to charge readers, calculate platform subscription
+            costs plus payment-processing and transaction fees. A free plan
+            for publishing may not support paid subscriptions or automation.
+          </p>
+          <p className="mt-4 text-sm text-gray-600">
+            Need a closer comparison? {" "}
+            <Link href="/mailerlite-vs-kit" className="underline">MailerLite vs ConvertKit (Kit)</Link>
+            {" · "}<Link href="/mailerlite-vs-beehiiv" className="underline">MailerLite vs Beehiiv</Link>
+            {" · "}<Link href="/getresponse-vs-mailerlite" className="underline">GetResponse vs MailerLite</Link>.
           </p>
         </section>
 

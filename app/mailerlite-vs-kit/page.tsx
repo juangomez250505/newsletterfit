@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "MailerLite vs Kit (2026): Pricing, Automation & Best Choice | NewsletterFit",
+    "MailerLite vs ConvertKit (Kit): 2026 Pricing | NewsletterFit",
   description:
-    "Compare MailerLite vs Kit for email marketing, newsletter automation, creator tools and pricing.",
+    "MailerLite vs ConvertKit (now Kit): compare 2026 free plans, pricing and automation for creators at 250 to 10,000 subscribers.",
   alternates: {
     canonical: "/mailerlite-vs-kit",
   },
@@ -57,7 +57,7 @@ export default function MailerLiteVsKitPage() {
         </div>
 
         <h1 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-          MailerLite vs Kit: Which email platform is better?
+          MailerLite vs ConvertKit (Kit): Pricing and Free Plans in 2026
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -80,6 +80,47 @@ export default function MailerLiteVsKitPage() {
             Choose <strong>Kit</strong> if you run a creator business and need
             stronger subscriber tagging, segmentation and automated email
             sequences.
+          </p>
+        </section>
+
+        {/* newsletterfit-seo-2026-11-09:kit */}
+        <section className="mt-14 rounded-2xl border border-gray-200 bg-gray-50 p-6 sm:p-8">
+          <h2 className="text-2xl font-bold">MailerLite vs ConvertKit: pricing in 2026</h2>
+          <p className="mt-4 leading-7 text-gray-700">
+            ConvertKit is now called Kit. For a new newsletter, free-plan limits
+            are a more useful starting point than broad feature ratings.
+            MailerLite Free covers up to 250 active subscribers and 2,500 email
+            sends per month; Kit Free covers up to 10,000 subscribers.
+          </p>
+          <div className="mt-6 overflow-x-auto">
+            <table className="w-full min-w-[520px] text-left text-sm">
+              <thead><tr className="border-b border-gray-300">
+                <th className="py-3 pr-5">Audience</th>
+                <th className="py-3 pr-5">MailerLite</th>
+                <th className="py-3">ConvertKit (now Kit)</th>
+              </tr></thead>
+              <tbody className="text-gray-700">
+                <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">250 subscribers</td><td className="py-3 pr-5">Free, within send limits</td><td className="py-3">Free</td></tr>
+                <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">1,000 subscribers</td><td className="py-3 pr-5">Paid plan required</td><td className="py-3">Free plan available</td></tr>
+                <tr><td className="py-3 pr-5 font-semibold">10,000 subscribers</td><td className="py-3 pr-5">Paid plan required</td><td className="py-3">Free plan available</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 leading-7 text-gray-700">
+            The catch: Kit&apos;s unlimited visual automations and email sequences
+            are paid Creator features. At 1,000 subscribers, Kit Creator is
+            listed at $33/month when billed yearly. MailerLite Free includes
+            up to three active automations, but much smaller audience and
+            sending limits. Compare the features you actually need, not just
+            the maximum subscriber count.
+          </p>
+          <p className="mt-4 text-sm text-gray-600">
+            Prices and limits checked November 2026: {" "}
+            <a href="https://www.mailerlite.com/pricing" className="underline" target="_blank" rel="noopener noreferrer">MailerLite pricing</a>
+            {" · "}
+            <a href="https://kit.com/pricing" className="underline" target="_blank" rel="noopener noreferrer">Kit pricing</a>
+            {" · "}
+            <Link className="underline" href="/newsletter-platform-pricing">Compare all newsletter platform fees</Link>.
           </p>
         </section>
 
