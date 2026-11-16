@@ -101,11 +101,19 @@ export default function MailerLiteVsKitPage() {
               </tr></thead>
               <tbody className="text-gray-700">
                 <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">250 subscribers</td><td className="py-3 pr-5">Free, within send limits</td><td className="py-3">Free</td></tr>
-                <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">1,000 subscribers</td><td className="py-3 pr-5">Paid plan required</td><td className="py-3">Free plan available</td></tr>
-                <tr><td className="py-3 pr-5 font-semibold">10,000 subscribers</td><td className="py-3 pr-5">Paid plan required</td><td className="py-3">Free plan available</td></tr>
+                {/* newsletterfit-seo-2026-11-16-us:kit */}
+                <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">1,000 subscribers</td><td className="py-3 pr-5">Comfort $17.10/mo (billed yearly)</td><td className="py-3">Free; Creator $33/mo billed yearly for advanced automations</td></tr>
+                <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">2,500 subscribers</td><td className="py-3 pr-5">Comfort $29.70/mo (billed yearly)</td><td className="py-3">Free plan available</td></tr>
+                <tr className="border-b border-gray-200"><td className="py-3 pr-5 font-semibold">5,000 subscribers</td><td className="py-3 pr-5">Comfort $44.10/mo (billed yearly)</td><td className="py-3">Free plan available</td></tr>
+                <tr><td className="py-3 pr-5 font-semibold">10,000 subscribers</td><td className="py-3 pr-5">Comfort $80.10/mo (billed yearly)</td><td className="py-3">Free plan available</td></tr>
               </tbody>
             </table>
           </div>
+          <p className="mt-4 text-sm text-gray-600">
+            MailerLite Comfort prices are USD monthly equivalents paid on an annual plan,
+            not monthly invoices. Compare features and sending limits as well as list size;
+            Kit&apos;s free and paid plans include different automation capabilities.
+          </p>
           <p className="mt-4 leading-7 text-gray-700">
             The catch: Kit&apos;s unlimited visual automations and email sequences
             are paid Creator features. At 1,000 subscribers, Kit Creator is

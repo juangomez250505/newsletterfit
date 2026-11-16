@@ -399,7 +399,12 @@ export default function BestNewsletterPlatformPage() {
             <p>
               <strong>3. Compare total cost, not just the monthly plan.</strong>{" "}
               Platform fees and payment processing can become more important
-              as revenue grows.
+              as revenue grows. See our{" "}
+              <Link href="/newsletter-platform-pricing" className="underline">
+                2026 newsletter pricing and fees comparison
+              </Link>{" "}
+              for subscriber-tier costs and paid newsletter charges.
+              {/* newsletterfit-seo-2026-11-16-us:best */}
             </p>
 
             <p>
