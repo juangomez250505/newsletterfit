@@ -386,6 +386,26 @@ export default function SubstackAlternativesPage() {
           </p>
         </section>
 
+        {/* SEO-NF-20261123-SUBSTACK */}
+        <section className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-7">
+          <h3 className="text-2xl font-bold">
+            What happens at $1,000 per month in paid subscriptions?
+          </h3>
+          <p className="mt-4 leading-7 text-gray-700">
+            With $1,000 in monthly paid subscription revenue, Substack&apos;s
+            standard 10% platform charge is $100 before Stripe. Beehiiv Lite
+            starts at $49 per month when billed annually for up to 1,000 total
+            subscribers, and Ghost(Pro) Publisher starts at $29 per month when
+            billed annually. These are different pricing models, so compare
+            product features, audience tiers and payment processing too.
+          </p>
+          <p className="mt-4 leading-7 text-gray-700">
+            Compare the <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline underline-offset-4">current Beehiiv subscriber tiers</Link>,
+            or use our <Link href="/substack-fee-calculator" className="font-semibold text-[#2860B8] underline underline-offset-4">Substack fee calculator</Link>
+            for your own paid newsletter numbers.
+          </p>
+        </section>
+
         <section className="mt-16 rounded-3xl bg-black p-8 text-white">
           <h2 className="text-3xl font-bold">
             Paying Substack fees already?

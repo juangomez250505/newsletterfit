@@ -317,6 +317,60 @@ export default function BestPaidNewsletterPlatformsPage() {
           </div>
         </section>
 
+        {/* SEO-NF-20261123-PAID */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold">
+            Paid newsletter platform fees: $1,000/month example
+          </h2>
+          <p className="mt-5 leading-7 text-gray-700">
+            Imagine you have 100 paying readers at $10 per month and no more
+            than 1,000 total subscribers. That is $1,000 in gross monthly
+            subscription revenue. Here is what the platform charge alone can
+            look like at this size:
+          </p>
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-gray-200">
+            <table className="w-full min-w-[660px] text-left">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-5 py-4 font-semibold">Platform</th>
+                  <th className="px-5 py-4 font-semibold">Monthly platform cost</th>
+                  <th className="px-5 py-4 font-semibold">Important detail</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200 text-gray-700">
+                <tr>
+                  <td className="px-5 py-4 font-semibold">Substack</td>
+                  <td className="px-5 py-4">$100</td>
+                  <td className="px-5 py-4">10% of paid revenue, plus Stripe</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-4 font-semibold">Beehiiv Lite</td>
+                  <td className="px-5 py-4">$49</td>
+                  <td className="px-5 py-4">Annual-billing monthly equivalent, plus processing</td>
+                </tr>
+                <tr>
+                  <td className="px-5 py-4 font-semibold">Ghost(Pro) Publisher</td>
+                  <td className="px-5 py-4">$29</td>
+                  <td className="px-5 py-4">Annual-billing monthly equivalent, plus processing</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-4 text-sm leading-6 text-gray-500">
+            Example based on standard US pricing reviewed November 2026.
+            Beehiiv and Ghost figures are monthly equivalents billed annually,
+            not monthly invoices. These charges do not include taxes, optional
+            extras or payment processing, and differences in features matter.
+            Check each provider&apos;s current terms before subscribing.
+          </p>
+          <p className="mt-5 leading-7 text-gray-700">
+            Use the <Link href="/substack-fee-calculator" className="font-semibold text-[#2860B8] underline underline-offset-4">Substack fee calculator</Link>
+            to include estimated Stripe fees, and see our <Link href="/beehiiv-pricing" className="font-semibold text-[#2860B8] underline underline-offset-4">Beehiiv pricing guide</Link>
+            for higher subscriber tiers. Your cheapest option may change when
+            your audience or software requirements grow.
+          </p>
+        </section>
+
         <section className="mt-16 rounded-2xl bg-black p-8 text-white">
           <h2 className="text-3xl font-bold">
             How much will your paid newsletter actually cost?
