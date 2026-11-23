@@ -75,6 +75,86 @@ export default function BestNewsletterPlatformForBeginnersPage() {
           </div>
         </section>
 
+        {/* NOV_23_2026_BEGINNER_FREE_PLANS */}
+        <section className="mt-14 rounded-2xl border border-gray-200 p-6 md:p-8">
+          <h2 className="text-3xl font-bold">
+            Which newsletter platform is free for beginners?
+          </h2>
+          <p className="mt-4 leading-7 text-gray-700">
+            Free does not mean the same thing on every platform. Before
+            choosing, check how many subscribers you can reach, what you can
+            send, and what happens when you start charging readers.
+          </p>
+          <div className="mt-6 overflow-x-auto">
+            <table className="w-full border-collapse text-left text-sm md:text-base">
+              <thead>
+                <tr className="border-b border-gray-300">
+                  <th className="py-3 pr-4">Platform</th>
+                  <th className="py-3 pr-4">Starting cost / limit</th>
+                  <th className="py-3">Watch out for</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-700">
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 font-semibold">Beehiiv</td>
+                  <td className="py-3 pr-4">Free for up to 2,500 subscribers</td>
+                  <td className="py-3">Paid subscriptions and additional growth tools need a paid plan.</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 font-semibold">Kit (formerly ConvertKit)</td>
+                  <td className="py-3 pr-4">Free for up to 10,000 subscribers</td>
+                  <td className="py-3">Advanced automated sequences require a paid plan.</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 font-semibold">MailerLite</td>
+                  <td className="py-3 pr-4">Free for up to 250 subscribers and 2,500 monthly emails</td>
+                  <td className="py-3">You need a paid plan as your active list grows beyond 250.</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-3 pr-4 font-semibold">Substack</td>
+                  <td className="py-3 pr-4">No monthly software fee to start a free publication</td>
+                  <td className="py-3">A 10% platform fee applies to paid subscriptions, plus processing.</td>
+                </tr>
+                <tr>
+                  <td className="py-3 pr-4 font-semibold">Ghost</td>
+                  <td className="py-3 pr-4">No permanent free Ghost(Pro) hosting plan</td>
+                  <td className="py-3">Self-hosting the open-source software is a separate option with hosting costs.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-5 text-sm leading-6 text-gray-600">
+            Plan limits checked in November 2026. Features, limits and billing
+            vary by plan. Confirm the current details before subscribing.
+          </p>
+          <p className="mt-4 leading-7 text-gray-700">
+            Need a quick answer for your audience size? Use our{' '}
+            <Link href="/newsletter-platform-pricing" className="font-semibold underline">
+              newsletter platform pricing comparison
+            </Link>{' '}
+            or{' '}
+            <Link href="/#calculator" className="font-semibold underline">
+              compare platforms with the free calculator
+            </Link>.
+          </p>
+        </section>
+
+        <section className="mt-14">
+          <h2 className="text-3xl font-bold">Best email marketing apps for a beginner newsletter</h2>
+          <p className="mt-4 leading-7 text-gray-700">
+            Choose a newsletter-first platform if publishing posts and growing
+            a reader community matter most: Beehiiv or Substack can be simpler
+            starting points. Choose MailerLite if you also need forms, landing
+            pages and email campaigns for a small business. Choose Kit if you
+            plan to sell products or build advanced creator automations as
+            your newsletter grows.
+          </p>
+          <p className="mt-4 leading-7 text-gray-700">
+            The best starting platform depends on the work you actually want
+            to do, not simply the largest advertised free subscriber limit.
+          </p>
+        </section>
+
         <section className="mt-14">
           <h2 className="text-3xl font-bold">
             Beginner-friendly newsletter platforms compared
@@ -434,7 +514,7 @@ export default function BestNewsletterPlatformForBeginnersPage() {
         </section>
 
         <p className="mt-12 text-sm leading-6 text-gray-500">
-          Last reviewed August 2026. Pricing and features can change. Verify
+          Originally published August 2026; free-plan limits reviewed November 2026. Prices and features can change. Verify
           current details directly with each platform before making a final
           decision.
         </p>
